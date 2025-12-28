@@ -1,0 +1,301 @@
+Day 1 – White-Hat Hacking Fundamentals
+
+100 Days Hacking Challenge
+
+1. What is Hacking (Real Meaning)
+
+Hacking is the process of understanding how systems work and identifying weaknesses in them.
+Ethical (white-hat) hacking focuses on finding and fixing vulnerabilities legally, not exploiting them for personal gain.
+
+Example:
+A company hires a security tester to check whether its website can be hacked before attackers find the weakness.
+
+2. White-Hat Hacking
+
+White-hat hackers are authorized security professionals who test systems legally and ethically. They follow rules, permissions, and responsible disclosure policies.
+
+Why it matters:
+Without white-hat hackers, organizations would not know their security weaknesses until criminals exploit them.
+
+Example:
+A security researcher reports a login bypass bug to a company instead of misusing it.
+
+3. Bug Bounty Hunting
+
+Bug bounty hunting is a program where companies allow ethical hackers to find vulnerabilities in their systems and report them responsibly. In return, companies may offer rewards or recognition.
+
+Key Points:
+
+Legal and permission-based
+
+Scope is clearly defined
+
+Focuses on reporting, not exploiting
+
+Example:
+Finding an SQL injection vulnerability in a website’s search feature and reporting it through the company’s bug bounty platform.
+
+4. Penetration Testing
+
+Penetration testing (pentesting) is a structured security assessment where testers simulate real-world attacks under controlled conditions to evaluate system security.
+
+How it differs from random attacks:
+
+Penetration Testing	Random Attacks
+Authorized	Unauthorized
+Planned & scoped	Unplanned
+Documented results	No reporting
+Improves security	Causes damage
+
+Example:
+Testing whether an internal company server can be accessed without proper authentication.
+
+5. Computer Networking
+
+Computer networking explains how devices communicate with each other using wired or wireless connections. It involves data transfer, protocols, addressing, and routing.
+
+Why networking is important in hacking:
+Every cyber attack happens over a network. Without networking knowledge, it is impossible to understand attacks or defenses.
+
+Example:
+A laptop sending a request to a website server using the internet.
+
+6. Client–Server Architecture
+
+Client–server architecture is a model where:
+
+Client requests a service
+
+Server processes the request and sends a response
+
+Roles:
+
+Client: Browser, mobile app
+
+Server: Web server, database server
+
+Example:
+When you open Instagram:
+
+Your phone = Client
+
+Instagram servers = Server
+
+7. What is a Server
+
+A server is a powerful computer designed to provide services, data, or resources to other devices (clients).
+
+Difference between PC and Server:
+
+Server runs 24/7
+
+Handles multiple users
+
+Stores and processes large amounts of data
+
+Example:
+A server hosting a website that thousands of users access simultaneously.
+
+8. Types of Servers
+
+Different servers perform different tasks:
+
+a) Web Server
+
+Handles HTTP/HTTPS requests and delivers web pages.
+
+Example:
+Apache or Nginx serving a website.
+
+b) Application Server
+
+Processes application logic and business rules.
+
+Example:
+Handling user login validation in a web app.
+
+c) Database Server
+
+Stores and manages data.
+
+Example:
+MySQL storing user credentials and posts.
+
+d) File Server
+
+Stores and shares files across a network.
+
+Example:
+Company file storage accessible to employees.
+
+9. Data Packets
+
+Data sent over a network is broken into small units called packets. Each packet travels independently and is reassembled at the destination.
+
+Why packets are important:
+Attackers and defenders analyze packets to detect suspicious activity.
+
+Example:
+Sending a message on WhatsApp:
+
+Message is split into packets
+
+Packets travel through different routes
+
+Reassembled on the receiver’s phone
+
+10. How Data Travels Over a Network
+
+Client sends request
+
+Data is divided into packets
+
+Packets travel through routers and switches
+
+Server receives and processes request
+
+Response packets return to client
+
+Example:
+Opening a website URL in a browser.
+
+11. Cybercrime Investigators
+
+Cybercrime investigators analyze digital evidence to track cybercriminals. They rely heavily on networking, server logs, and packet analysis.
+
+Example:
+Tracing an attacker's IP address using server logs.
+
+12. Security Professionals
+
+Security professionals design, monitor, and improve system security. They use tools only after understanding the underlying systems.
+
+Key Skills Needed Before Tools:
+
+- Networking
+
+- System architecture
+
+- Protocols
+
+- Ethics
+13. Types of Hackers
+
+Hackers are commonly categorized based on intent, authorization, and ethical approach. Understanding these types helps distinguish between legal security work and cybercrime.
+
+1) White-Hat Hackers (Ethical Hackers)
+
+White-hat hackers are authorized security professionals who legally test systems to identify and fix vulnerabilities. They follow laws, permissions, and ethical standards.
+
+Key Characteristics:
+
+Legal and permission-based
+
+Focus on defense and security improvement
+
+Follow responsible disclosure
+
+Example:
+A company hires a penetration tester to assess its website security and submit a detailed vulnerability report.
+
+1) Black-Hat Hackers (Malicious Hackers)
+
+Black-hat hackers illegally exploit vulnerabilities for personal gain, damage, or data theft. Their activities are criminal and harmful.
+
+Key Characteristics:
+
+No authorization
+
+Illegal actions
+
+Intent to steal, damage, or disrupt
+
+Example:
+Stealing customer credit card details from an unsecured e-commerce website.
+
+3️⃣ Gray-Hat Hackers
+
+Gray-hat hackers fall between white-hat and black-hat hackers. They may discover vulnerabilities without permission but usually do not intend harm. However, their actions can still be illegal.
+
+Key Characteristics:
+
+No official permission
+
+Mixed intentions
+
+Ethical boundaries unclear
+
+Example:
+Finding a vulnerability in a website without permission and notifying the owner without exploiting it.
+
+4️⃣ Script Kiddies
+
+Script kiddies are beginners who use pre-written tools or scripts without understanding how they work. They rely on automation rather than technical knowledge.
+
+Key Characteristics:
+
+Limited technical understanding
+
+Use publicly available tools
+
+Often cause unintended damage
+
+Example:
+Running a DDoS tool downloaded from the internet without knowing how the attack works.
+
+5️⃣ Hacktivists
+
+Hacktivists use hacking techniques to promote political, social, or ideological causes. Their actions are often illegal even if motivated by beliefs.
+
+Key Characteristics:
+
+Ideology-driven
+
+Targets governments or organizations
+
+Public exposure of data
+
+Example:
+Defacing a government website to protest a policy.
+
+6️⃣ Insider Threats
+
+Insider threats are individuals within an organization who misuse their access intentionally or unintentionally.
+
+Key Characteristics:
+
+Authorized access
+
+High impact due to trust level
+
+Difficult to detect
+
+Example:
+An employee leaking confidential company data.
+
+7️⃣ Cyber Terrorists
+
+Cyber terrorists aim to create fear, disruption, or large-scale damage by attacking critical infrastructure such as power grids, healthcare systems, or financial institutions.
+
+Key Characteristics:
+
+Large-scale impact
+
+Targets critical systems
+
+Politically or ideologically motivated
+
+Example:
+Attacking a hospital network to disrupt emergency services.
+
+🔑 Importance of Understanding Hacker Types
+
+Understanding hacker types helps:
+
+Identify threats
+
+Design proper security controls
+
+Distinguish ethical hacking from cybercrime
+
+Build a responsible security mindset
