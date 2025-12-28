@@ -198,7 +198,7 @@ Follow responsible disclosure
 Example:
 A company hires a penetration tester to assess its website security and submit a detailed vulnerability report.
 
-1) Black-Hat Hackers (Malicious Hackers)
+2) Black-Hat Hackers (Malicious Hackers)
 
 Black-hat hackers illegally exploit vulnerabilities for personal gain, damage, or data theft. Their activities are criminal and harmful.
 
@@ -213,7 +213,7 @@ Intent to steal, damage, or disrupt
 Example:
 Stealing customer credit card details from an unsecured e-commerce website.
 
-3️⃣ Gray-Hat Hackers
+3️) Gray-Hat Hackers
 
 Gray-hat hackers fall between white-hat and black-hat hackers. They may discover vulnerabilities without permission but usually do not intend harm. However, their actions can still be illegal.
 
@@ -228,7 +228,7 @@ Ethical boundaries unclear
 Example:
 Finding a vulnerability in a website without permission and notifying the owner without exploiting it.
 
-4️⃣ Script Kiddies
+4️) Script Kiddies
 
 Script kiddies are beginners who use pre-written tools or scripts without understanding how they work. They rely on automation rather than technical knowledge.
 
@@ -243,7 +243,7 @@ Often cause unintended damage
 Example:
 Running a DDoS tool downloaded from the internet without knowing how the attack works.
 
-5️⃣ Hacktivists
+5️) Hacktivists
 
 Hacktivists use hacking techniques to promote political, social, or ideological causes. Their actions are often illegal even if motivated by beliefs.
 
@@ -258,7 +258,7 @@ Public exposure of data
 Example:
 Defacing a government website to protest a policy.
 
-6️⃣ Insider Threats
+6️) Insider Threats
 
 Insider threats are individuals within an organization who misuse their access intentionally or unintentionally.
 
@@ -273,7 +273,7 @@ Difficult to detect
 Example:
 An employee leaking confidential company data.
 
-7️⃣ Cyber Terrorists
+7️) Cyber Terrorists
 
 Cyber terrorists aim to create fear, disruption, or large-scale damage by attacking critical infrastructure such as power grids, healthcare systems, or financial institutions.
 
@@ -288,7 +288,7 @@ Politically or ideologically motivated
 Example:
 Attacking a hospital network to disrupt emergency services.
 
-🔑 Importance of Understanding Hacker Types
+->Importance of Understanding Hacker Types
 
 Understanding hacker types helps:
 
@@ -297,5 +297,6 @@ Identify threats
 Design proper security controls
 
 Distinguish ethical hacking from cybercrime
+
 
 Build a responsible security mindset
