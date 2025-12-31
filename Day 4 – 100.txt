@@ -1,0 +1,52 @@
+Day 4 – Subdomain Enumeration
+
+Subdomain enumeration is the process of identifying additional web assets that exist under a primary domain. These subdomains are often created for administrative, development, or testing purposes and are frequently overlooked during security hardening.
+
+For example, a company may secure its primary website:
+
+mainwebsite.com
+
+However, during assessment, the following subdomains may be discovered:
+
+admin.mainwebsite.com
+test.mainwebsite.com
+dev.mainwebsite.com
+legacy.mainwebsite.com
+
+Although these subdomains belong to the same organization, they are often not protected at the same security level as the main website.
+
+Why Subdomains Become Attack Targets
+
+Primary websites usually receive regular updates, monitoring, and security testing. In contrast, subdomains are often created temporarily and then forgotten. Over time, they may run outdated software, lack proper authentication controls, or expose sensitive functionality.
+
+Attackers focus on these assets because they frequently provide easier access compared to the main website.
+
+Practical Example
+
+During a security assessment, the main website was found to be well protected. However, an admin subdomain exposed a login panel that did not enforce multi-factor authentication. A legacy subdomain was running an outdated application framework with known vulnerabilities.
+
+Although these systems were not intended for public use, they were accessible from the internet and became potential entry points.
+
+How Attackers Discover Subdomains
+
+Attackers do not rely on random guessing. They use structured methods such as DNS records, certificate transparency logs, public data sources, and automated enumeration tools. By collecting and analyzing this information, they build a list of subdomains associated with a target organization.
+
+This process helps attackers map the organization’s full attack surface.
+
+How Subdomains Lead to System Compromise
+
+Once a vulnerable subdomain is discovered, an attacker may exploit weak authentication, misconfigurations, or outdated software. Access gained on a subdomain can be used to extract credentials, configuration files, or internal network details.
+
+From there, attackers often move laterally to more critical systems, eventually impacting the main infrastructure.
+
+In many real-world incidents, the breach does not originate from the primary website but from a neglected subdomain.
+
+Security Lessons Learned
+
+Every subdomain should be treated as a production asset. Unused subdomains must be removed, and active ones should follow the same security standards as the main application.
+
+Regular asset inventory, continuous monitoring, access restrictions, and timely patching are essential to prevent such entry points from being exploited.
+
+Summary
+
+Day 4 highlights how forgotten or poorly secured subdomains often become the weakest link in an organization’s security posture. Proper visibility and management of all digital assets are critical to preventing system compromise.
