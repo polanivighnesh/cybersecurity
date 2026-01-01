@@ -1,0 +1,193 @@
+Day 5 – Server Vulnerabilities vs Website Vulnerabilities
+Introduction
+
+A website may appear secure to users, but security depends on two different layers:
+
+The server where the website is hosted
+
+The website application itself
+
+Understanding the difference between server vulnerabilities and website vulnerabilities is critical in real-world security assessments.
+
+What Are Server Vulnerabilities
+
+Server vulnerabilities are weaknesses in the infrastructure or system that hosts one or more websites. These vulnerabilities affect the entire server, not just a single website.
+
+Common Server Vulnerabilities
+Unpatched Operating System or Software
+
+Servers running outdated operating systems, web servers, or services contain known vulnerabilities that attackers can exploit.
+
+Example:
+A Linux server running an old Apache version is vulnerable to a known remote code execution flaw.
+
+Impact:
+All websites hosted on that server are at risk.
+
+Weak or Default Credentials
+
+Servers using weak passwords or default login credentials are vulnerable to brute-force attacks.
+
+Example:
+SSH login protected with a simple password instead of key-based authentication.
+
+Impact:
+Once the attacker gains server access, all hosted websites can be compromised.
+
+Misconfigured Server Settings
+
+Improper configurations expose sensitive services or files.
+
+Examples:
+Directory listing enabled
+Admin panels publicly accessible
+Debug mode enabled in production
+
+Impact:
+Attackers gain unauthorized access to server resources.
+
+Open and Unnecessary Ports
+
+Servers running unnecessary services expose additional attack surfaces.
+
+Example:
+FTP, database ports, or admin services open to the internet.
+
+Impact:
+Attackers can scan and exploit exposed services.
+
+No Firewall or WAF
+
+Servers without firewalls or Web Application Firewalls do not filter malicious traffic.
+
+Example:
+No protection against automated scanning, brute-force attacks, or injection attempts.
+
+Impact:
+Higher risk of mass exploitation.
+
+Shared Hosting Environment
+
+Multiple websites share the same server resources.
+
+Example:
+One vulnerable website allows an attacker to upload malicious files and pivot to other sites.
+
+Impact:
+One compromised website can affect many others.
+
+What Are Website Vulnerabilities
+
+Website vulnerabilities are weaknesses in the web application code or logic. These usually affect only that specific website, not the entire server.
+
+Common Website Vulnerabilities
+SQL Injection
+
+Occurs when user input is not properly validated before being used in database queries.
+
+Example:
+Login form allows attackers to manipulate SQL queries and bypass authentication.
+
+Impact:
+Database data theft or modification.
+
+Cross-Site Scripting (XSS)
+
+Occurs when user input is displayed without proper sanitization.
+
+Example:
+Malicious scripts injected into comment sections.
+
+Impact:
+Session hijacking or user redirection.
+
+Broken Authentication
+
+Occurs when login mechanisms are improperly implemented.
+
+Example:
+Session IDs not expiring after logout.
+
+Impact:
+Attackers impersonate legitimate users.
+
+Insecure File Upload
+
+Occurs when file uploads are not properly validated.
+
+Example:
+Uploading a malicious script instead of an image.
+
+Impact:
+Website defacement or code execution.
+
+Broken Access Control
+
+Occurs when users can access resources they should not.
+
+Example:
+Normal users accessing admin pages by changing URLs.
+
+Impact:
+Privilege escalation.
+
+Exposed Sensitive Data
+
+Occurs when sensitive information is stored or transmitted insecurely.
+
+Example:
+Plaintext passwords or exposed configuration files.
+
+Impact:
+Data leaks and privacy violations.
+
+Key Differences Between Server and Website Vulnerabilities
+Aspect	Server Vulnerabilities	Website Vulnerabilities
+Scope	Affects entire server	Affects one website
+Impact	Multiple websites compromised	Single website compromised
+Cause	OS, services, configurations	Application code flaws
+Example	Unpatched Apache server	SQL injection in login form
+Risk Level	High impact	Medium to high impact
+Real-World Scenario Example
+
+A company hosts three websites on a single shared server.
+
+Website A has an insecure file upload vulnerability.
+An attacker uploads a malicious script and gains limited server access.
+The server has outdated software and no proper isolation.
+
+Result:
+The attacker moves laterally and compromises Website B and Website C.
+
+This attack happened because of:
+
+Website vulnerability (insecure file upload)
+
+Server vulnerability (shared hosting, outdated software)
+
+How Security Should Be Approached
+
+Website security alone is not enough.
+Server security alone is not enough.
+
+Both must work together.
+
+Secure servers require:
+
+Regular patching
+
+Strong authentication
+
+Proper configurations
+
+Firewalls and monitoring
+
+Secure websites require:
+
+Secure coding practices
+
+Input validation
+
+Proper authentication
+
+Access control
