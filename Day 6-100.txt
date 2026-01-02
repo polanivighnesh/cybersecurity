@@ -1,0 +1,43 @@
+Web Archive OSINT – Tool Combination and Real-World Scenarios
+Introduction
+
+Web archiving plays a crucial role in OSINT and cybersecurity investigations. When websites are modified or deleted, investigators rely on archived data to analyze past activity and preserve digital evidence. No single tool captures all historical data, so combining multiple web archiving tools is essential for accurate and reliable investigations.
+
+Why Multiple Tools Are Required
+
+Websites may block crawlers, restrict access, or change content frequently. Some tools focus on long-term history, while others capture instant or recent copies. Using multiple tools together ensures broader coverage, reduces blind spots, and strengthens the credibility of collected evidence.
+
+Tools and Their Primary Purpose
+
+Wayback Machine
+Used for long-term historical analysis. It helps investigators view how a website appeared on different dates and track changes in content, structure, and messaging over time.
+
+Archive.today (archive.ph)
+Used for instant evidence preservation. It captures exact visual snapshots of webpages and often works even when websites attempt to block archiving.
+
+CachedView
+Used for quick recovery of recently removed websites. It accesses cached copies stored by search engines before they expire.
+
+Memento Time Travel
+Used for cross-checking across multiple web archives. It helps confirm whether a webpage exists in different archival sources.
+
+Tool Combination Scenarios
+Scenario 1: Scam Website Deleted After Fraud
+
+In this scenario, a scam website is taken down immediately after victims are cheated. CachedView is first used to check if a recent cached version exists. If available, this provides immediate access to the last live content. The Wayback Machine is then used to explore older snapshots to identify how long the scam was active and how the offers changed. Archive.today is used to preserve key pages as permanent evidence. Finally, Memento Time Travel is used to verify whether additional archived copies exist in other sources.
+
+Scenario 2: Website Content Modified to Hide Malicious Activity
+
+Sometimes websites are not deleted but quietly modify content to remove fake claims or misleading offers. The Wayback Machine is used to compare older and newer versions of the site to identify removed or altered content. Archive.today is used to capture the current version as proof of modification. Memento Time Travel is used to validate the timeline across archives.
+
+Scenario 3: Website Blocks Archiving or Access
+
+Certain websites restrict archiving using technical controls. In such cases, the Wayback Machine may show limited or no snapshots. Archive.today is then used to capture the page because it often bypasses such restrictions. CachedView may provide a temporary copy if the page was recently indexed. Memento Time Travel is used to check alternative archives for availability.
+
+Scenario 4: Long-Term Investigation and Pattern Analysis
+
+In long-running investigations, understanding how a website evolves over months or years is critical. The Wayback Machine is used to build a detailed timeline of changes. Archive.today snapshots are stored periodically to preserve key states of the website. Memento Time Travel ensures consistency by checking multiple archival sources.
+
+Benefits of Tool Combination
+
+Combining tools improves investigation accuracy, preserves reliable evidence, and provides multiple verification points. This approach ensures that investigators are not dependent on a single platform and can confidently present findings for reporting, analysis, or legal use
