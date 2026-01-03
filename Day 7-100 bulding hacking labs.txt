@@ -1,0 +1,116 @@
+Day 7 – Building an Ethical Hacking Lab
+Installing Kali Linux and Parrot OS (Step by Step)
+
+Ethical hacking is practiced in controlled environments.
+Instead of attacking real systems, professionals build isolated labs using virtual machines to learn safely and legally.
+
+Lab Architecture
+
+Host System
+The main operating system running on the physical machine (Windows, Linux, or macOS).
+
+Virtual Machines
+Kali Linux – Attacker system
+Parrot OS – Attacker or security-focused system
+Vulnerable Machine – Victim system (optional)
+
+Hypervisor
+VirtualBox or VMware used to run multiple operating systems.
+
+Prerequisites
+
+Minimum 8 GB RAM (16 GB recommended)
+At least 60 GB free disk space
+Virtualization enabled in BIOS (Intel VT-x or AMD-V)
+Stable internet connection
+
+Step 1: Install VirtualBox
+
+Download VirtualBox from the official website.
+Install it using default settings.
+Download and install the VirtualBox Extension Pack of the same version.
+
+VirtualBox allows multiple operating systems to run safely on a single host machine.
+
+Step 2: Download Kali Linux
+
+Visit the official Kali Linux website.
+Navigate to Downloads and select the VirtualBox image.
+Download the .ova file.
+
+Step 3: Install Kali Linux in VirtualBox
+
+Open VirtualBox.
+Click File and select Import Appliance.
+Choose the Kali Linux .ova file.
+Allocate system resources:
+RAM: 4 GB
+CPU: 2 cores
+Click Import and wait for completion.
+
+Default login credentials:
+Username: kali
+Password: kali
+
+Step 4: Download Parrot OS
+
+Visit the official Parrot OS website.
+Select Parrot Security Edition for VirtualBox.
+Download the .ova file.
+
+Step 5: Install Parrot OS
+
+Open VirtualBox.
+Click Import Appliance.
+Select the Parrot OS .ova file.
+Allocate resources:
+RAM: 4 GB
+CPU: 2 cores
+Import and start the virtual machine.
+
+Step 6: Network Configuration
+
+Open VirtualBox settings for each virtual machine.
+Set Network Adapter to one of the following:
+
+NAT mode for beginners and safer internet access
+Internal Network for isolated lab environments
+
+Do not expose vulnerable machines to public networks.
+
+Step 7: Add a Vulnerable Victim Machine (Optional)
+
+Install intentionally vulnerable systems such as:
+Metasploitable
+DVWA
+OWASP Broken Web Applications
+
+These systems are used only for practice and learning.
+
+Common Tools Available in Kali and Parrot OS
+
+Nmap
+Metasploit
+Burp Suite
+Wireshark
+Hydra
+SQLmap
+
+These tools must be used only in authorized environments.
+
+Legal and Ethical Considerations
+
+Never attack systems without explicit permission.
+Use labs or authorized targets only.
+Ethical hacking requires consent, responsibility, and documentation.
+
+Learning Outcome
+
+Ability to build a legal hacking environment
+Hands-on understanding of attacker techniques
+Improved defensive thinking
+Preparation for real-world security roles
+
+Conclusion
+
+This lab setup reflects how security researchers, penetration testers, SOC analysts, and ethical hackers practice in real-world scenarios.
