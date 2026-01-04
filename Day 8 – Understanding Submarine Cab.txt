@@ -1,0 +1,103 @@
+Day 8 – Understanding Submarine Cables and Internet Infrastructure
+Introduction
+
+The internet is often imagined as a wireless or cloud-based system. In reality, the majority of global internet communication depends on physical infrastructure, especially submarine fiber-optic cables laid across the ocean floor. On Day 8, I explored how these cables work and why they are critical to global connectivity and cybersecurity.
+
+How the Internet Actually Works
+
+When a user accesses a website or sends data:
+
+The request travels from the user’s device to the local ISP.
+
+Data is routed through terrestrial fiber networks.
+
+For international communication, data is transmitted through submarine fiber-optic cables.
+
+The data reaches landing stations, then data centers and servers.
+
+The response follows the same physical path back to the user.
+
+Contrary to common belief, satellites handle only a small portion of global traffic. More than 95% of international data flows through undersea cables.
+
+What Are Submarine Cables
+
+Submarine cables are high-capacity fiber-optic cables placed on the seabed to connect continents and countries.
+
+Key characteristics:
+
+Carry massive volumes of internet traffic
+
+Use light signals to transmit data
+
+Protected by layers of insulation and armor
+
+Connected to terrestrial networks via landing stations
+
+These cables form the backbone of the global internet.
+
+Landing Stations and Data Centers
+
+Landing stations act as transition points where undersea cables connect to land-based infrastructure.
+
+Their roles include:
+
+Routing international traffic
+
+Connecting submarine cables to data centers
+
+Distributing data to regional networks
+
+Data centers host servers that process, store, and deliver digital services such as websites, cloud platforms, and applications.
+
+How Connection Failures Occur
+
+Internet connectivity can fail due to damage to submarine cables.
+
+Common causes:
+
+Ship anchors and fishing activities
+
+Natural disasters such as earthquakes
+
+Accidental damage during maintenance
+
+Intentional sabotage or targeted attacks
+
+A single cable failure can lead to:
+
+Network congestion
+
+Increased latency
+
+Complete internet outages in some regions
+
+Cybersecurity and Physical Infrastructure
+
+Cyber attacks are often associated with malware or hacking tools, but this exploration revealed that physical infrastructure is equally critical.
+
+Attackers or adversaries may:
+
+Target cable landing stations
+
+Disrupt undersea cables
+
+Exploit infrastructure weaknesses to cause large-scale outages
+
+Securing cyberspace requires protecting both digital systems and physical assets.
+
+Key Learnings
+
+The internet relies heavily on physical infrastructure.
+
+Submarine cables carry most of the world’s internet traffic.
+
+Damage to a single cable can disrupt entire regions.
+
+Cybersecurity extends beyond software to physical network components.
+
+Understanding infrastructure is essential for effective security planning.
+
+Conclusion
+
+This exploration changed my perspective on how the internet functions. The internet is not just a digital network but a complex physical system spanning oceans and continents. Effective cybersecurity begins with understanding and securing the infrastructure that makes global connectivity possible.
+
