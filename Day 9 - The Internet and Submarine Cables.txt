@@ -1,0 +1,97 @@
+The Internet and Submarine Cables
+Introduction
+
+The Internet is a global system that allows computers and devices around the world to communicate. Most people think the Internet is wireless, but over 95 percent of global data travels through underwater submarine cables.
+
+What Is the Internet
+
+The Internet is a global network of computers connected using cables, satellites, routers, and servers. It is used to send data such as emails, websites, videos, and messages.
+
+The Internet works using protocols, mainly TCP/IP (Transmission Control Protocol / Internet Protocol).
+
+Who Invented the Internet
+
+The Internet was not invented by one person.
+
+Key contributors include:
+
+Vinton Cerf, co-inventor of TCP/IP
+
+Robert Kahn, co-inventor of TCP/IP
+
+ARPANET (1969), the first working version of the Internet, developed by the United States Department of Defense
+
+Vinton Cerf is often called the father of the Internet.
+
+What Are Submarine Cables
+
+Submarine cables are fiber-optic cables laid under oceans and seas to connect continents.
+
+They carry:
+
+Internet data
+
+Phone calls
+
+Video streaming
+
+Financial transactions
+
+Who Invented Submarine Cables
+
+Early history:
+
+In 1858, the first transatlantic telegraph cable was created
+
+It was led by Cyrus West Field
+
+Modern Internet cables:
+
+Use fiber-optic technology
+
+Developed during the 1970s and 1980s
+
+Based on research by scientists such as Charles K. Kao, a pioneer of fiber optics
+
+How Submarine Cables Work
+
+Data is converted into light signals
+
+Light travels through fiber-optic glass
+
+Repeaters boost the signal every 50 to 100 kilometers
+
+Data reaches another continent in milliseconds
+
+Example:
+India ----- Europe ----- USA
+
+Why Submarine Cables Are Important
+
+Submarine cables are:
+
+Faster than satellites
+
+More reliable
+
+Lower cost
+
+They are essential for cloud services, online gaming, video calls, and global trade.
+
+Risks and Protection
+
+Submarine cables can be damaged by earthquakes, fishing nets, and ship anchors.
+
+They are protected through international laws, deep-sea placement, and constant monitoring.
+
+Interesting Facts
+
+More than 500 submarine cables exist worldwide
+
+Some cables are longer than 20,000 kilometers
+
+Companies like Google, Meta, and Microsoft own submarine cables
+
+Conclusion
+
+The Internet depends heavily on physical infrastructure, especially submarine cables. Without them, global communication would be slow, unreliable, or impossible.
