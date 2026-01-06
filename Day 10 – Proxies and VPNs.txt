@@ -1,0 +1,103 @@
+Day 10 – Proxies and VPNs
+Introduction
+
+In cybersecurity, proxies and VPNs are commonly used tools for managing network traffic and protecting identity. These tools can be used by attackers to hide their origin and by investigators or security professionals to safeguard privacy. Understanding how both proxies and VPNs function is important for analyzing real-world cyber scenarios.
+
+What is a Proxy
+
+A proxy server acts as an intermediary between a user and the internet. Instead of connecting directly to a website, the user sends requests through the proxy server, which forwards them to the destination.
+
+How a Proxy Works
+
+The user sends a request to the proxy server
+
+The proxy server forwards the request to the target website
+
+The website responds to the proxy server
+
+The proxy server sends the response back to the user
+
+The target website only sees the proxy server’s IP address and not the user’s real IP address.
+
+Uses of a Proxy
+
+Hides the user’s IP address
+
+Helps bypass basic network restrictions
+
+Used for web scraping and automation
+
+Enables content filtering
+
+Assists in load balancing
+
+Limitations of a Proxy
+
+Does not encrypt data
+
+Traffic can be monitored by the proxy provider
+
+Not suitable for handling sensitive information
+
+What is a VPN
+
+A Virtual Private Network (VPN) creates a secure and encrypted connection between the user’s device and the internet. All traffic is routed through a VPN server, ensuring privacy and data protection.
+
+How a VPN Works
+
+The user connects to a VPN server
+
+Data is encrypted on the user’s device
+
+Encrypted data travels through a secure tunnel
+
+The VPN server decrypts the data and forwards it to the internet
+
+The destination website sees the VPN server’s IP address
+
+Advantages of a VPN
+
+Encrypts network traffic
+
+Protects user privacy
+
+Secures data on public Wi-Fi
+
+Prevents direct ISP tracking
+
+Provides stronger security than proxies
+
+Limitations of a VPN
+
+Reduced speed due to encryption overhead
+
+Free VPN services may impose data limits
+
+VPN provider can potentially log traffic
+
+Proxy vs VPN Comparison
+Feature	Proxy	VPN
+IP masking	Yes	Yes
+Data encryption	No	Yes
+Security level	Low	High
+Performance	Faster	Slightly slower
+Primary use	Basic anonymity	Privacy and security
+Cybersecurity Perspective
+
+Attackers often use proxies and VPNs to hide their identity and bypass detection. Investigators and cybersecurity professionals use these tools to protect their privacy while conducting investigations. Understanding these technologies is essential for analyzing logs, tracing attack paths, and defending networks.
+
+Key Takeaways
+
+Proxies hide IP addresses but do not encrypt data
+
+VPNs hide IP addresses and encrypt traffic
+
+VPNs offer better security than proxies
+
+Free services should be used cautiously
+
+Knowledge of network masking tools is essential in cybersecurity
+
+Conclusion
+
+Proxies and VPNs are fundamental tools in modern networking and cybersecurity. Knowing how they work and how they can be misused helps security professionals better defend systems and conduct investigations responsibly.
