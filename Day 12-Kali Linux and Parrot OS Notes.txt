@@ -1,0 +1,143 @@
+Kali Linux and Parrot OS Notes
+Introduction
+
+Kali Linux and Parrot OS are Debian-based Linux distributions primarily used for cybersecurity tasks such as penetration testing, ethical hacking, digital forensics, and security research. Both are widely used by security professionals and students.
+
+Kali Linux
+Overview
+
+Kali Linux is developed and maintained by Offensive Security. It is designed specifically for penetration testing and security auditing and includes a large collection of pre-installed security tools.
+
+Key Features
+
+Debian-based rolling release
+
+Extensive collection of security and penetration testing tools
+
+Supports ARM devices
+
+Live boot and persistence mode
+
+Frequent updates
+
+Strong community and official documentation
+
+Common Tools
+
+Nmap
+
+Metasploit Framework
+
+Burp Suite
+
+Wireshark
+
+Hydra
+
+Aircrack-ng
+
+John the Ripper
+
+Use Cases
+
+Penetration testing
+
+Vulnerability assessment
+
+Red teaming
+
+Capture The Flag competitions
+
+Security research
+
+Advantages
+
+Industry standard for penetration testing
+
+Large and well-maintained toolset
+
+Widely trusted by security professionals
+
+Limitations
+
+High system resource usage
+
+Not suitable as a daily-use operating system
+
+Steeper learning curve for beginners
+
+Parrot OS
+Overview
+
+Parrot OS is developed by Parrot Security and focuses on security, privacy, and software development. It is more lightweight compared to Kali Linux.
+
+Editions
+
+Parrot Security Edition for penetration testing and digital forensics
+
+Parrot Home Edition for daily use with privacy tools
+
+Key Features
+
+Debian-based system
+
+Privacy and anonymity focused tools
+
+Lightweight and efficient performance
+
+Suitable for daily use
+
+Includes development tools
+
+Common Tools
+
+Metasploit
+
+Nmap
+
+Wireshark
+
+SQLmap
+
+Burp Suite
+
+AnonSurf
+
+OWASP tools
+
+Use Cases
+
+Ethical hacking
+
+Privacy and anonymity
+
+Secure software development
+
+Daily-use operating system for security professionals
+
+Advantages
+
+Lightweight and faster than Kali Linux
+
+Beginner-friendly interface
+
+Strong focus on privacy and anonymity
+
+Limitations
+
+Smaller community compared to Kali Linux
+
+Fewer pre-installed tools than Kali Linux
+
+Comparison Between Kali Linux and Parrot OS
+Feature	Kali Linux	Parrot OS
+Developer	Offensive Security	Parrot Security
+Base	Debian	Debian
+Tool Availability	Very High	High
+Resource Usage	High	Low
+Privacy Focus	Moderate	Strong
+Beginner Friendly	Moderate	High
+Daily Use	Not Recommended	Recommended
+Conclusion
+
+Kali Linux is best suited for professional penetration testing and security auditing. Parrot OS is a better choice for users who want a lightweight, privacy-focused operating system that can also be used for everyday tasks. Both distributions are powerful and widely used in the cybersecurity domain.
