@@ -1,0 +1,187 @@
+1. What is DVWA?
+
+DVWA (Damn Vulnerable Web Application) is an intentionally insecure web application created for learning and practicing web application security.
+
+Purpose of DVWA
+
+DVWA is designed to help:
+
+Students learn common web vulnerabilities
+
+Practice ethical hacking and penetration testing
+
+Understand how vulnerabilities work and how to fix them
+
+DVWA should only be used in a legal lab environment, never on real or public systems.
+
+2. Technologies Used in DVWA
+
+DVWA is built using:
+
+PHP – server-side scripting
+
+MySQL / MariaDB – database
+
+Apache / Nginx – web server
+
+Because of this, DVWA is commonly run using:
+
+XAMPP / WAMP / LAMP
+
+Docker
+
+Virtual Machines (Kali Linux, Ubuntu, etc.)
+
+3. Vulnerabilities Covered in DVWA
+
+DVWA includes hands-on labs for major OWASP Top 10 vulnerabilities, such as:
+
+SQL Injection (SQLi)
+
+Cross-Site Scripting (XSS)
+
+Command Injection
+
+File Inclusion (LFI / RFI)
+
+Brute Force Attacks
+
+CSRF (Cross-Site Request Forgery)
+
+File Upload Vulnerabilities
+
+Insecure CAPTCHA
+
+Weak Session Management
+
+Each vulnerability has security levels:
+
+Low
+
+Medium
+
+High
+
+Impossible
+
+This helps users see how defenses improve security.
+
+4. Lab Setup Overview
+System Requirements
+
+Operating System: Linux / Windows / macOS
+
+Web Server: Apache
+
+Database: MySQL or MariaDB
+
+PHP (compatible version)
+
+Browser (Firefox or Chrome recommended)
+
+5. DVWA Installation Steps (Example: XAMPP)
+Step 1: Install XAMPP
+
+Download and install XAMPP
+
+Start Apache and MySQL
+
+Step 2: Download DVWA
+
+Clone or download DVWA from GitHub
+
+Place it inside the web server directory:
+
+htdocs/dvwa
+
+Step 3: Configure DVWA
+
+Rename config.inc.php.dist to config.inc.php
+
+Set database credentials:
+
+Username: root
+
+Password: (empty by default in XAMPP)
+
+Step 4: Create Database
+
+Open browser:
+
+http://localhost/phpmyadmin
+
+
+Create a database named:
+
+dvwa
+
+Step 5: Initialize DVWA
+
+Open:
+
+http://localhost/dvwa/setup.php
+
+
+Click Create / Reset Database
+
+6. Default Login Credentials
+Username: admin
+Password: password
+
+
+After login:
+
+Go to DVWA Security
+
+Set security level to Low for beginners
+
+7. Lab Usage Guidelines
+
+Perform attacks only inside DVWA
+
+Change security levels to understand protection mechanisms
+
+Document:
+
+Vulnerability
+
+Attack method
+
+Impact
+
+Mitigation
+
+This is useful for lab reports and GitHub documentation.
+
+8. Ethical and Legal Notice
+
+DVWA is for:
+
+Education
+
+Practice
+
+Ethical hacking labs
+
+Don't Using these techniques on real systems without permission is illegal.
+
+9. Suggested GitHub Repository Structure
+DVWA-Lab/
+│
+├── README.md
+├── setup-notes.md
+├── vulnerabilities/
+│   ├── sql-injection.md
+│   ├── xss.md
+│   └── csrf.md
+└── screenshots/
+
+10. Learning Outcome
+
+By completing DVWA labs, users will:
+
+Understand real-world web vulnerabilities
+
+Learn offensive and defensive security concepts
+
+Gain hands-on experience in penetration testing
