@@ -1,0 +1,188 @@
+Nmap (Network Mapper) 
+1. Introduction to Nmap
+
+Nmap (Network Mapper) is an open-source tool used for network discovery and security auditing.
+It is widely used by network administrators, system engineers, and cybersecurity professionals to identify devices, services, and vulnerabilities on a network.
+
+Nmap works by sending packets to a target system and analyzing the responses to determine:
+
+Which hosts are online
+
+Which ports are open
+
+What services are running
+
+What operating system the target is using
+
+2. Why Nmap is Needed (Importance)
+
+Nmap is needed because it helps in:
+
+Network Discovery – Identifying active devices on a network
+
+Security Assessment – Finding open ports and potential attack points
+
+Vulnerability Detection – Detecting misconfigurations and weak services
+
+Network Inventory – Knowing what systems and services exist
+
+Penetration Testing – Used in ethical hacking to gather target information
+
+Monitoring & Auditing – Ensuring only authorized services are running
+
+Without tools like Nmap, managing and securing large networks would be extremely difficult.
+
+3. Features of Nmap
+3.1 Host Discovery
+
+Detects live hosts in a network
+
+Identifies which systems are up or down
+
+3.2 Port Scanning
+
+Scans TCP and UDP ports
+
+Identifies open, closed, and filtered ports
+
+3.3 Service & Version Detection
+
+Detects services running on open ports
+
+Identifies service versions (e.g., Apache, SSH, FTP)
+
+3.4 Operating System Detection
+
+Determines the target OS (Linux, Windows, macOS, etc.)
+
+Uses TCP/IP stack fingerprinting
+
+3.5 Nmap Scripting Engine (NSE)
+
+Allows running scripts for:
+
+Vulnerability detection
+
+Malware detection
+
+Brute-force testing
+
+Information gathering
+
+3.6 Firewall & IDS Evasion
+
+Can bypass firewalls and intrusion detection systems (IDS)
+
+Supports stealth scanning techniques
+
+3.7 Output Formats
+
+Supports multiple output formats:
+
+Normal
+
+XML
+
+Grepable
+
+Useful for reporting and automation
+
+4. How Nmap Works
+
+Nmap works by:
+
+Sending packets to target systems
+
+Analyzing responses
+
+Determining:
+
+Host availability
+
+Port status
+
+Services and OS
+
+It uses different scanning techniques such as:
+
+SYN scan
+
+TCP connect scan
+
+UDP scan
+
+ACK scan
+
+5. How Nmap is Used (Basic Usage)
+5.1 Basic Scan
+
+Scans a target for open ports:
+
+nmap <target-ip>
+
+5.2 Scan a Range of IPs
+nmap 192.168.1.1-50
+
+5.3 Scan Specific Ports
+nmap -p 80,443 <target-ip>
+
+5.4 Service Version Detection
+nmap -sV <target-ip>
+
+5.5 Operating System Detection
+nmap -O <target-ip>
+
+5.6 Aggressive Scan
+
+Performs OS detection, version detection, script scanning:
+
+nmap -A <target-ip>
+
+5.7 Run NSE Scripts
+nmap --script=vuln <target-ip>
+
+6. Types of Nmap Scans
+Scan Type	Description
+SYN Scan (-sS)	Fast and stealthy TCP scan
+TCP Connect Scan (-sT)	Completes TCP handshake
+UDP Scan (-sU)	Scans UDP ports
+Ping Scan (-sn)	Detects live hosts
+ACK Scan (-sA)	Firewall rule detection
+7. Advantages of Nmap
+
+Free and open-source
+
+Cross-platform (Linux, Windows, macOS)
+
+Powerful and flexible
+
+Large community support
+
+Highly customizable
+
+8. Limitations of Nmap
+
+Requires proper permissions (root/admin)
+
+Can be detected by security systems
+
+Not a full vulnerability scanner
+
+Misuse may be illegal without authorization
+
+9. Legal and Ethical Use
+
+Important:
+Nmap should only be used on:
+
+Systems you own
+
+Systems you have explicit permission to scan
+
+Unauthorized scanning may be illegal and unethical.
+
+10. Conclusion
+
+Nmap is a powerful and essential tool in networking and cybersecurity.
+It helps in discovering networks, identifying open ports, detecting services, and improving overall security posture.
+When used responsibly, Nmap plays a crucial role in protecting systems from cyber threats.
