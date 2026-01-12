@@ -1,0 +1,53 @@
+Day 16 – OWASP Juice Shop
+Overview
+
+OWASP Juice Shop is a deliberately vulnerable web application created to demonstrate modern web application security issues. It is designed to help learners understand how real-world applications fail due to poor design and insecure implementation.
+
+Objective
+
+To understand common security issues in modern web applications
+
+To practice identifying vulnerabilities in a safe environment
+
+To develop an attacker’s mindset and improve defensive thinking
+
+Key Vulnerabilities Learned
+Logic Flaws
+
+Logic flaws occur when application workflows are poorly designed. Attackers can exploit these weaknesses without breaking authentication mechanisms. Such flaws allow users to bypass steps, misuse features, or gain unintended advantages.
+
+Insecure Authentication
+
+Insecure authentication includes weak login mechanisms, poor password policies, improper session handling, and missing security controls such as rate limiting. These weaknesses can allow unauthorized access to user accounts.
+
+Improper Input Validation
+
+Improper input validation happens when user inputs are not properly checked or sanitized. This can lead to injection attacks and unexpected application behavior, allowing attackers to manipulate requests or data.
+
+Uses of OWASP Juice Shop
+
+Used for learning modern web application security concepts
+
+Helps practice real-world vulnerability exploitation safely
+
+Useful for penetration testing training
+
+Creates awareness about secure coding and application design
+
+Aligns with common web security standards and practices
+
+Key Takeaways
+
+Application security depends on both code and logic design
+
+Authentication systems must be properly implemented and protected
+
+Input validation is critical to prevent manipulation
+
+Practical labs provide better understanding than theory alone
+
+Thinking like an attacker helps in building secure applications
+
+Conclusion
+
+OWASP Juice Shop is an effective learning platform for understanding how modern web applications fail due to logical and security weaknesses. It provides hands-on experience that strengthens both offensive and defensive security knowledge.
