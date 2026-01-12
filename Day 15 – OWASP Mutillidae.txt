@@ -1,0 +1,65 @@
+Day 15 – OWASP Mutillidae
+Overview
+
+OWASP Mutillidae is a deliberately vulnerable web application used for learning and practicing web application security. It contains multiple vulnerabilities aligned with the OWASP Top 10 and is commonly used by beginners to understand how insecure coding practices lead to real-world attacks.
+
+Objective
+
+To understand common web vulnerabilities through hands-on practice
+
+To learn how poorly maintained websites can be exploited
+
+To strengthen knowledge of OWASP Top 10 vulnerabilities
+
+What is Mutillidae
+
+Mutillidae is an open-source vulnerable web application written in PHP and uses a MySQL database. It is designed to help security learners practice exploiting vulnerabilities in a legal and controlled environment.
+
+Vulnerabilities Explored
+SQL Injection
+
+Occurs when user input is directly included in SQL queries without proper validation. This allows attackers to manipulate database queries and access sensitive data.
+
+Cross-Site Scripting (XSS)
+
+Allows attackers to inject malicious scripts into web pages viewed by other users. This can lead to session hijacking or data theft.
+
+Command Injection
+
+Happens when user input is passed directly to system commands. Attackers can execute arbitrary commands on the server.
+
+Authentication Bypass
+
+Weak authentication mechanisms allow attackers to bypass login checks and gain unauthorized access.
+
+File Inclusion
+
+Improper handling of file paths can allow attackers to include malicious files, leading to information disclosure or remote code execution.
+
+Uses of Mutillidae
+
+Learning basic to intermediate web application vulnerabilities
+
+Practicing exploitation techniques safely
+
+Understanding real-world attack scenarios
+
+Preparing for certifications like CEH and security interviews
+
+Improving awareness of secure coding practices
+
+Key Takeaways
+
+Poor input validation leads to serious security issues
+
+Even simple applications can have critical vulnerabilities
+
+Secure coding and regular maintenance are essential
+
+Hands-on practice improves vulnerability understanding
+
+OWASP Top 10 provides a strong foundation for web security
+
+Conclusion
+
+Mutillidae is an effective learning platform for understanding how real-world web applications fail due to insecure coding and poor maintenance. Practicing on Mutillidae helps build a strong foundation in web application security concepts.
