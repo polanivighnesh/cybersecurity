@@ -1,0 +1,148 @@
+OWASP Top 10 Vulnerabilities (2024)
+
+The OWASP Top 10 is a regularly updated list of the most critical web application security risks. It helps developers, testers, and security professionals understand common vulnerabilities that lead to real-world data breaches.
+
+1. Broken Access Control
+
+Broken Access Control occurs when applications fail to properly enforce user permissions. Attackers can access unauthorized data or perform actions beyond their privileges.
+
+Examples include users accessing admin pages, modifying other users’ data, or bypassing authorization checks.
+
+Impact:
+
+Unauthorized data access
+
+Privilege escalation
+
+Account takeover
+
+2. Cryptographic Failures
+
+Cryptographic Failures happen when sensitive data is not properly protected using encryption or secure cryptographic practices.
+
+This includes weak encryption algorithms, improper key management, or storing sensitive data in plaintext.
+
+Impact:
+
+Exposure of sensitive data
+
+Data breaches
+
+Loss of confidentiality
+
+3. Injection
+
+Injection vulnerabilities occur when untrusted input is sent to an interpreter as part of a command or query, such as SQL, NoSQL, or OS commands.
+
+Attackers can manipulate queries to read, modify, or delete data.
+
+Impact:
+
+Unauthorized database access
+
+Data manipulation or loss
+
+Remote code execution
+
+4. Insecure Design
+
+Insecure Design refers to weaknesses in application architecture and design decisions that make applications inherently vulnerable.
+
+These issues cannot be fixed by simple patches and require redesigning secure workflows.
+
+Impact:
+
+Business logic abuse
+
+System compromise
+
+Long-term security risks
+
+5. Security Misconfiguration
+
+Security Misconfiguration occurs when applications, servers, or cloud services are not securely configured.
+
+Examples include default credentials, unnecessary services enabled, or missing security headers.
+
+Impact:
+
+System compromise
+
+Unauthorized access
+
+Increased attack surface
+
+6. Vulnerable and Outdated Components
+
+Using libraries, frameworks, or software components with known vulnerabilities can expose applications to attacks.
+
+This often happens when components are not regularly updated or monitored.
+
+Impact:
+
+Exploitation of known vulnerabilities
+
+System compromise
+
+Supply chain attacks
+
+7. Identification and Authentication Failures
+
+These failures occur when authentication mechanisms are poorly implemented.
+
+Examples include weak passwords, improper session handling, or missing multi-factor authentication.
+
+Impact:
+
+Account takeover
+
+Credential stuffing attacks
+
+Unauthorized access
+
+8. Software and Data Integrity Failures
+
+This vulnerability arises when applications rely on untrusted software updates, plugins, or CI/CD pipelines without proper integrity checks.
+
+Attackers can inject malicious code into trusted systems.
+
+Impact:
+
+Malware injection
+
+Unauthorized code execution
+
+Data manipulation
+
+9. Server-Side Request Forgery (SSRF)
+
+SSRF occurs when an application fetches remote resources without validating user-supplied URLs.
+
+Attackers can force the server to access internal services or sensitive endpoints.
+
+Impact:
+
+Access to internal systems
+
+Data leakage
+
+Cloud metadata exposure
+
+10. Security Logging and Monitoring Failures
+
+When applications fail to log and monitor security events properly, attacks can go undetected for long periods.
+
+This delays incident response and increases damage.
+
+Impact:
+
+Undetected breaches
+
+Delayed incident response
+
+Increased business impact
+
+Conclusion
+
+Understanding the OWASP Top 10 is essential for building secure web applications.
+Addressing these vulnerabilities early helps reduce security risks and prevents real-world data breaches.
