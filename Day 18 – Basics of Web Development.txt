@@ -1,0 +1,125 @@
+Day 18 – Basics of Web Development (For Cybersecurity)
+Why Web Development Knowledge Is Important for Hackers
+
+Understanding how web applications are built is essential for identifying vulnerabilities. Most web attacks exist because of poor design, insecure coding practices, or misconfigured components. Learning development helps hackers and security professionals think like builders before attackers.
+
+Core Web Technologies
+HTML (HyperText Markup Language)
+
+HTML defines the structure of a web page. It controls elements like forms, buttons, input fields, and links. Many vulnerabilities such as form manipulation and injection attacks originate from improper HTML usage.
+
+CSS (Cascading Style Sheets)
+
+CSS is used to style and layout web pages. While CSS is not directly responsible for major vulnerabilities, improper usage can expose hidden elements and sensitive information in the UI.
+
+JavaScript
+
+JavaScript adds interactivity and dynamic behavior to web applications. Client-side validation, DOM manipulation, and API calls rely on JavaScript. Weak JavaScript code can lead to vulnerabilities like XSS and client-side validation bypass.
+
+Backend Development Basics
+Server-Side Languages
+
+Backend languages handle business logic, authentication, and data processing. Common examples include JavaScript (Node.js), Python, PHP, and Java. Insecure backend logic often results in authentication bypass and logic flaws.
+
+Databases
+
+Databases store application data. Poor query handling and input validation can lead to SQL Injection or NoSQL Injection attacks. Understanding how queries work helps in identifying injection points.
+
+Common Web Development Tools
+Git
+
+Git is a version control system used to manage and track code changes. Exposed repositories and poor access control can leak sensitive source code.
+
+npm
+
+npm is a package manager for JavaScript. Using vulnerable or outdated dependencies can introduce security risks into applications.
+
+Frameworks
+
+Frameworks like React, Vue, Django, and Express speed up development. Misconfiguration or insecure default settings can open attack surfaces.
+
+How Web Development Helps in Cybersecurity
+
+Helps identify insecure coding patterns
+
+Improves understanding of authentication and authorization logic
+
+Makes it easier to detect misconfigurations
+
+Strengthens ability to perform code review and vulnerability assessment
+
+Builds a strong foundation for web application security testing
+
+Client–Server Architecture
+
+Web applications follow a client–server model. The client (browser) sends requests, and the server processes them and returns responses. Understanding request–response flow helps in identifying attack vectors like request tampering and parameter manipulation.
+
+HTTP and HTTPS Basics
+
+HTTP is the protocol used for communication between client and server. It includes methods such as GET, POST, PUT, and DELETE. HTTPS encrypts this communication using TLS. Misconfigured HTTPS can lead to Man-in-the-Middle attacks.
+
+HTTP Status Codes
+
+Status codes indicate server responses.
+
+200 – Successful request
+
+301/302 – Redirection
+
+401 – Unauthorized
+
+403 – Forbidden
+
+404 – Not Found
+
+500 – Internal Server Error
+
+Improper error handling can leak sensitive information.
+
+Cookies and Sessions
+
+Cookies store small pieces of data on the client side. Sessions store user state on the server.
+Weak cookie attributes or improper session handling can lead to session hijacking and fixation attacks.
+
+Authentication and Authorization
+
+Authentication verifies user identity, while authorization controls access to resources. Logical flaws in these mechanisms often cause privilege escalation and broken access control.
+
+Input Validation
+
+User input must always be validated and sanitized on the server side. Relying only on client-side validation is insecure and allows attackers to bypass restrictions.
+
+APIs and JSON
+
+Modern applications rely heavily on APIs. APIs exchange data using formats like JSON.
+Poorly secured APIs can expose sensitive endpoints, leading to data leakage and unauthorized access.
+
+Frontend vs Backend Security Responsibility
+
+Frontend focuses on user interaction and presentation.
+Backend is responsible for security enforcement.
+Trusting the frontend for security decisions is a common mistake.
+
+Dependency Management Risks
+
+Third-party libraries speed up development but may introduce vulnerabilities. Regular updates and dependency scanning are critical.
+
+Development Environment vs Production
+
+Debug modes, verbose error messages, and test credentials should never exist in production environments. Many real-world breaches occur due to misconfigured deployments.
+
+Logging and Monitoring
+
+Logs help detect suspicious activity. Poor logging makes incident response difficult, while excessive logging may expose sensitive data.
+
+Secure Coding Mindset
+
+Developers must assume all input is malicious by default. Writing secure code requires awareness of attack techniques and defensive programming practices.
+
+Relation Between Development and Ethical Hacking
+
+Ethical hacking is not just about tools but understanding application logic. The deeper the development knowledge, the more effective the vulnerability discovery.
+
+Summary
+
+Web development knowledge bridges the gap between attackers and defenders. Learning how applications are built is a foundational step toward mastering web application security.
