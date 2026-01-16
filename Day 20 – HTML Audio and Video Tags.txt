@@ -1,0 +1,143 @@
+Day 20 – HTML Audio and Video Tags (Detailed Notes)
+Introduction
+
+HTML provides built-in support for multimedia through the <audio> and <video> tags. These tags allow developers to embed sound and video content directly into web pages without the need for third-party plugins like Flash.
+
+Audio Tag
+Purpose
+
+The <audio> tag is used to embed audio content such as music, voice recordings, podcasts, and sound effects.
+
+Basic Syntax
+<audio>
+    <source src="audiofile.mp3" type="audio/mpeg">
+</audio>
+
+Audio Attributes
+Attribute	Description
+controls	Displays play, pause, and volume controls
+autoplay	Automatically plays audio when the page loads
+loop	Replays the audio after it ends
+muted	Starts audio in muted mode
+preload	Defines how audio is loaded (auto, metadata, none)
+Audio with Controls
+<audio controls>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+Autoplay and Loop Example
+<audio autoplay loop muted>
+    <source src="background.mp3" type="audio/mpeg">
+</audio>
+
+Video Tag
+Purpose
+
+The <video> tag is used to embed video content such as tutorials, product demos, lectures, and animations.
+
+Basic Syntax
+<video>
+    <source src="video.mp4" type="video/mp4">
+</video>
+
+Video Attributes
+Attribute	Description
+controls	Displays play, pause, volume, fullscreen options
+width	Sets the width of the video
+height	Sets the height of the video
+autoplay	Starts playing video automatically
+loop	Replays the video
+muted	Mutes the video
+poster	Displays an image before the video plays
+preload	Defines how video data is loaded
+Video with Controls
+<video width="640" height="360" controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video element.
+</video>
+
+Video with Poster Image
+<video width="640" controls poster="thumbnail.jpg">
+    <source src="movie.mp4" type="video/mp4">
+</video>
+
+Source Tag
+Purpose
+
+The <source> tag is used to specify multiple media formats to ensure browser compatibility.
+
+Example
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    <source src="video.ogg" type="video/ogg">
+</video>
+
+Media Formats Supported
+Audio Formats
+
+MP3
+
+WAV
+
+OGG
+
+Video Formats
+
+MP4
+
+WebM
+
+OGG
+
+Accessibility in Media
+Best Practices
+
+Always include fallback text
+
+Use captions or subtitles for videos
+
+Avoid autoplay with sound
+
+Provide controls for user interaction
+
+Performance Considerations
+
+Use compressed media files
+
+Prefer MP4 and MP3 formats for compatibility
+
+Use the preload attribute wisely
+
+Avoid heavy autoplay media on page load
+
+Common Mistakes
+
+Forgetting the controls attribute
+
+Using unsupported media formats
+
+Not providing fallback text
+
+Large file sizes affecting page load
+
+Use Cases
+
+E-learning platforms
+
+Portfolio websites
+
+Music and podcast platforms
+
+Online courses and tutorials
+
+Key Learnings Summary
+
+Embedded audio and video using HTML
+
+Learned media attributes and controls
+
+Understood browser compatibility
+
+Implemented accessibility-friendly media
