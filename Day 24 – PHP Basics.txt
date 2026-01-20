@@ -1,0 +1,183 @@
+Day 24 – PHP Basics
+Variables, Operators & Conditional Statements
+1. What is PHP?
+
+PHP (Hypertext Preprocessor) is a server-side scripting language mainly used for web development.
+It runs on the server and generates dynamic web pages.
+
+Why PHP?
+
+Easy to learn
+
+Widely used for backend development
+
+Works well with HTML & databases (MySQL)
+
+2. PHP Variables
+What is a Variable?
+
+A variable is a container used to store data that can be reused and modified.
+
+Rules for PHP Variables
+
+Must start with $
+
+Cannot start with a number
+
+Case-sensitive
+
+No spaces allowed
+
+Example:
+<?php
+$name = "John";
+$age = 25;
+$isAdmin = true;
+
+echo $name;
+echo $age;
+?>
+
+Variable Types
+<?php
+$text = "Hello";      // String
+$number = 10;         // Integer
+$price = 99.99;       // Float
+$status = true;       // Boolean
+?>
+
+3. PHP Operators
+What are Operators?
+
+Operators are symbols used to perform operations on variables and values.
+
+3.1 Arithmetic Operators
+
+Used for mathematical calculations.
+
+Operator	Meaning
++	Addition
+-	Subtraction
+*	Multiplication
+/	Division
+%	Modulus
+
+Example:
+
+<?php
+$a = 10;
+$b = 5;
+
+echo $a + $b; // 15
+echo $a * $b; // 50
+?>
+
+3.2 Assignment Operators
+
+Used to assign values.
+
+<?php
+$x = 10;
+$x += 5;   // $x = $x + 5
+echo $x;   // 15
+?>
+
+3.3 Comparison Operators
+
+Used to compare values.
+
+Operator	Meaning
+==	Equal
+!=	Not Equal
+>	Greater Than
+<	Less Than
+>=	Greater or Equal
+<=	Less or Equal
+
+Example:
+
+<?php
+$a = 10;
+$b = 5;
+
+var_dump($a > $b);  // true
+?>
+
+3.4 Logical Operators
+
+Used to combine conditions.
+
+Operator	Meaning
+&&	AND
+	
+!	NOT
+
+Example:
+
+<?php
+$age = 20;
+
+if ($age > 18 && $age < 60) {
+    echo "Eligible";
+}
+?>
+
+4. Conditional Statements
+What are Conditions?
+
+Conditional statements control the flow of execution based on conditions.
+
+4.1 if Statement
+<?php
+$score = 80;
+
+if ($score >= 50) {
+    echo "Pass";
+}
+?>
+
+4.2 if–else Statement
+<?php
+$score = 40;
+
+if ($score >= 50) {
+    echo "Pass";
+} else {
+    echo "Fail";
+}
+?>
+
+4.3 if–else if–else Statement
+<?php
+$marks = 85;
+
+if ($marks >= 90) {
+    echo "Excellent";
+} elseif ($marks >= 60) {
+    echo "Good";
+} else {
+    echo "Needs Improvement";
+}
+?>
+
+5. Real-World Example (Login Logic)
+<?php
+$username = "admin";
+$password = "1234";
+
+if ($username == "admin" && $password == "1234") {
+    echo "Login Successful";
+} else {
+    echo "Invalid Credentials";
+}
+?>
+
+6. Key Takeaways
+
+Variables store data
+
+Operators perform actions on data
+
+Conditions control program flow
+
+Strong basics are essential for secure web applications
