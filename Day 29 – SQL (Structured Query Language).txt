@@ -1,0 +1,269 @@
+Day 29 – SQL (Structured Query Language)
+1. What is SQL?
+
+SQL (Structured Query Language) is a standard language used to store, retrieve, manipulate, and manage data in relational databases.
+It works with data stored in tables consisting of rows and columns.
+
+SQL is widely used in:
+
+Backend development
+
+Data analysis
+
+Cybersecurity & forensics
+
+Data engineering
+
+Enterprise systems
+
+2. Core Features of SQL
+2.1 Data Querying
+
+SQL allows users to retrieve specific data from one or multiple tables.
+
+Fetch complete tables or selected columns
+
+Apply conditions to limit results
+
+Combine data from multiple tables
+
+Example:
+
+SELECT name, age FROM employees;
+
+2.2 Data Manipulation (DML)
+
+SQL supports inserting, updating, and deleting data in tables.
+
+Operations include:
+
+INSERT – add new records
+
+UPDATE – modify existing records
+
+DELETE – remove records
+
+Examples:
+
+INSERT INTO employees VALUES (1, 'John', 30);
+UPDATE employees SET age = 31 WHERE id = 1;
+DELETE FROM employees WHERE id = 1;
+
+2.3 Data Definition (DDL)
+
+SQL helps define and modify database structures.
+
+Used to:
+
+Create tables
+
+Modify table schema
+
+Delete database objects
+
+Examples:
+
+CREATE TABLE employees (
+  id INT,
+  name VARCHAR(50),
+  age INT
+);
+
+ALTER TABLE employees ADD salary INT;
+DROP TABLE employees;
+
+2.4 Data Control (DCL)
+
+SQL manages user access and permissions to protect data.
+
+Used for:
+
+Granting privileges
+
+Revoking access
+
+Examples:
+
+GRANT SELECT ON employees TO user1;
+REVOKE INSERT ON employees FROM user1;
+
+2.5 Performance Optimization
+
+SQL improves query performance using:
+
+Indexes
+
+Query planning
+
+Efficient joins
+
+Indexes reduce search time on large datasets.
+
+3. Uses of SQL
+
+Database management
+
+Data analysis and reporting
+
+Backend application logic
+
+Data warehousing
+
+Security auditing and monitoring
+
+Log analysis in cybersecurity
+
+4. Key SQL Terms (Explained in Depth)
+4.1 SELECT
+
+Used to retrieve data from tables.
+
+Syntax:
+
+SELECT column1, column2 FROM table_name;
+
+
+Example:
+
+SELECT name, age FROM employees;
+
+
+Purpose:
+
+Fetch specific data
+
+Read-only operation
+
+Foundation of most SQL queries
+
+4.2 WHERE
+
+Filters records based on conditions.
+
+Syntax:
+
+SELECT * FROM table WHERE condition;
+
+
+Example:
+
+SELECT * FROM orders WHERE price > 50;
+
+
+Common operators:
+
+=, !=, >, <, >=, <=
+
+AND, OR, NOT
+
+4.3 JOIN
+
+Combines rows from two or more tables using a related column.
+
+Common JOIN types:
+
+INNER JOIN – matching records only
+
+LEFT JOIN – all from left table
+
+RIGHT JOIN – all from right table
+
+FULL JOIN – all records
+
+Example:
+
+SELECT customers.name, orders.amount
+FROM customers
+JOIN orders ON customers.id = orders.customer_id;
+
+
+Purpose:
+
+Relational data access
+
+Avoid data duplication
+
+Build meaningful datasets
+
+4.4 GROUP BY
+
+Groups rows with similar values and applies aggregate functions.
+
+Common aggregate functions:
+
+COUNT()
+
+SUM()
+
+AVG()
+
+MIN()
+
+MAX()
+
+Example:
+
+SELECT status, COUNT(*)
+FROM orders
+GROUP BY status;
+
+
+Use case:
+
+Reports
+
+Summaries
+
+Analytics dashboards
+
+4.5 INDEX
+
+Improves query performance by speeding up data retrieval.
+
+Example:
+
+CREATE INDEX idx_department ON employees(department);
+
+
+Key points:
+
+Faster SELECT queries
+
+Uses extra storage
+
+Slows INSERT/UPDATE slightly
+
+Best used on:
+
+Frequently searched columns
+
+Large tables
+
+5. SQL in Cybersecurity Context
+
+Detect suspicious activity from logs
+
+Analyze failed login attempts
+
+Monitor database access patterns
+
+Identify data leakage and anomalies
+
+Support forensic investigations
+
+Example:
+
+SELECT user, COUNT(*)
+FROM login_logs
+WHERE status = 'FAILED'
+GROUP BY user;
+
+6. Summary
+
+SQL is essential for managing structured data
+
+Core concepts include SELECT, WHERE, JOIN, GROUP BY, and INDEX
+
+Strong SQL fundamentals are critical for backend, data, and security roles
+
+Performance and access control are key strengths of SQL
