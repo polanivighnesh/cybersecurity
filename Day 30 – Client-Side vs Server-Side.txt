@@ -1,0 +1,238 @@
+Day 30 – Client-Side vs Server-Side Security
+Vulnerabilities and Mitigation (Deep Notes)
+1. Introduction
+
+On Day 30, the focus was on understanding how PHP (server-side) and JavaScript (client-side) handle security, the vulnerabilities that arise on each side, and the correct mitigation strategies.
+
+In web application security, the most important concept is trust boundary. Client-side code runs in an untrusted environment, while server-side code runs in a controlled environment. This difference defines how security must be implemented.
+
+2. Client-Side Security
+2.1 What is Client-Side?
+
+Client-side refers to code that executes in the user’s browser.
+Technologies involved include:
+
+JavaScript
+
+HTML
+
+CSS
+
+The browser environment is fully controlled by the user, which means any security implemented only on the client side can be bypassed.
+
+2.2 Client-Side Vulnerabilities
+Cross-Site Scripting (XSS)
+
+XSS occurs when user-supplied input is injected into a webpage and executed as JavaScript.
+Attackers can:
+
+Steal cookies and session tokens
+
+Perform actions as the victim
+
+Deface or redirect the website
+
+Example payload:
+
+<script>alert('XSS')</script>
+
+Client-Side Validation Bypass
+
+Client-side validation is usually implemented using JavaScript.
+Attackers can:
+
+Disable JavaScript
+
+Modify requests using tools like Burp Suite
+
+Send malicious data directly to the server
+
+This makes client-side validation unreliable for security enforcement.
+
+Exposed Source Code
+
+All client-side code is visible to users.
+Sensitive information such as:
+
+API endpoints
+
+Business logic
+
+Hardcoded keys
+
+can be extracted and abused.
+
+DOM Manipulation Attacks
+
+Attackers manipulate the Document Object Model (DOM) using browser developer tools.
+This can lead to:
+
+Bypassing UI-based restrictions
+
+Changing application behavior
+
+Insecure Local Storage and Cookies
+
+Storing sensitive data in:
+
+localStorage
+
+sessionStorage
+
+Non-HttpOnly cookies
+
+makes it vulnerable to theft, especially during XSS attacks.
+
+2.3 Client-Side Mitigation Techniques
+
+Sanitize and encode all user-generated content before rendering it in the browser.
+
+Use Content Security Policy (CSP) to restrict script execution sources.
+
+Never store secrets, API keys, or credentials on the client side.
+
+Use HTTPS to protect data in transit.
+
+Store session identifiers in HttpOnly and Secure cookies.
+
+Treat client-side validation as usability support, not security.
+
+3. Server-Side Security
+3.1 What is Server-Side?
+
+Server-side refers to code executed on the backend server.
+It is responsible for:
+
+Authentication
+
+Authorization
+
+Database interactions
+
+Business logic
+
+Common server-side technologies:
+
+PHP
+
+Java
+
+Python
+
+Node.js
+
+SQL databases
+
+3.2 Server-Side Vulnerabilities
+SQL Injection
+
+Occurs when user input is directly concatenated into SQL queries.
+Attackers can:
+
+Read sensitive data
+
+Modify database records
+
+Delete entire tables
+
+Example payload:
+
+' OR 1=1 --
+
+Authentication Bypass
+
+Weak authentication logic allows attackers to:
+
+Log in without valid credentials
+
+Reuse stolen session tokens
+
+Broken Access Control
+
+Occurs when authorization checks are missing or improperly implemented.
+Attackers gain access to:
+
+Admin panels
+
+Other users’ data
+
+Restricted APIs
+
+Command Injection
+
+User input is executed as system-level commands.
+This can lead to full server compromise.
+
+Insecure File Upload
+
+Improper validation allows attackers to upload:
+
+Web shells
+
+Malicious scripts
+
+These files may be executed on the server.
+
+Server Misconfiguration
+
+Common issues include:
+
+Default credentials
+
+Open ports
+
+Verbose error messages
+
+Unpatched software
+
+Misconfiguration is one of the most common causes of breaches.
+
+3.3 Server-Side Mitigation Techniques
+
+Use prepared statements or parameterized queries to prevent SQL injection.
+
+Hash passwords using strong algorithms such as bcrypt or Argon2.
+
+Implement proper authentication and session management.
+
+Enforce role-based access control and least privilege principles.
+
+Validate all inputs on the server, regardless of client-side checks.
+
+Disable default configurations and unnecessary services.
+
+Restrict file uploads by type, size, and execution permissions.
+
+Hide detailed error messages from users.
+
+4. Client-Side vs Server-Side Comparison
+Aspect	Client-Side	Server-Side
+Execution Environment	User browser	Backend server
+Trust Level	Untrusted	Trusted
+Code Visibility	Fully visible	Hidden
+Common Attacks	XSS	SQL Injection
+Security Role	Supportive	Critical
+5. Key Security Principles
+
+Never trust data coming from the client.
+
+Client-side security improves usability, not protection.
+
+Server-side security enforces trust and access control.
+
+Defense-in-depth is required for secure applications.
+
+Secure coding must be part of development, not an afterthought.
+
+6. Conclusion
+
+Client-side security alone is insufficient and easily bypassed.
+Server-side vulnerabilities can result in complete system compromise and data breaches.
+
+Effective web security requires:
+
+Strong server-side validation
+
+Secure configuration
+
+Continuous testing and monitoring
