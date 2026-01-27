@@ -1,0 +1,220 @@
+Day 31 – Primary Key, Foreign Key & Deep SQL Relationships
+1. What is a Primary Key?
+
+A Primary Key (PK) is a column or a set of columns that uniquely identifies each record in a table.
+
+Core Characteristics
+
+Each value must be unique
+
+NULL values are not allowed
+
+Only one primary key per table
+
+Ensures entity integrity
+
+Automatically creates a unique index
+
+Why Primary Key is Important
+
+Prevents duplicate records
+
+Enables fast data retrieval
+
+Acts as a reference point for other tables
+
+Maintains data accuracy and consistency
+
+Example
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(50),
+    email VARCHAR(100)
+);
+
+Types of Primary Keys
+
+Single-column Primary Key
+
+Example: user_id
+
+Composite Primary Key
+
+Uses multiple columns together
+
+PRIMARY KEY (student_id, course_id)
+
+
+Surrogate Key
+
+Artificially generated (AUTO_INCREMENT, UUID)
+
+No business meaning
+
+Natural Key
+
+Derived from real-world data (email, SSN)
+
+Can change, so less preferred
+
+2. What is a Foreign Key?
+
+A Foreign Key (FK) is a column that references the primary key of another table.
+
+Core Characteristics
+
+Creates a relationship between tables
+
+Can have duplicate values
+
+Can be NULL
+
+Enforces referential integrity
+
+Why Foreign Key is Important
+
+Prevents orphan records
+
+Ensures valid data relationships
+
+Maintains consistency across tables
+
+Supports relational database structure
+
+Example
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    user_id INT,
+    product VARCHAR(50),
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+3. Primary Key vs Foreign Key
+Primary Key	Foreign Key
+Uniquely identifies records	Links records between tables
+Cannot be NULL	Can be NULL
+Only one per table	Multiple allowed
+No duplicates	Duplicates allowed
+Ensures entity integrity	Ensures referential integrity
+4. SQL Relationships
+1. One-to-One (1:1)
+
+One record in table A relates to one record in table B
+
+Example: User → Profile
+
+user_id PRIMARY KEY
+profile.user_id FOREIGN KEY
+
+2. One-to-Many (1:N)
+
+One record relates to many records
+
+Most common relationship
+
+Example: User → Orders
+
+orders.user_id FOREIGN KEY REFERENCES users(user_id)
+
+3. Many-to-Many (M:N)
+
+Many records relate to many records
+
+Requires a junction table
+
+CREATE TABLE enrollments (
+    student_id INT,
+    course_id INT,
+    PRIMARY KEY (student_id, course_id)
+);
+
+5. Referential Integrity Rules
+ON DELETE Rules
+
+CASCADE – deletes child records automatically
+
+SET NULL – sets foreign key to NULL
+
+RESTRICT – prevents deletion
+
+NO ACTION – similar to restrict
+
+FOREIGN KEY (user_id)
+REFERENCES users(user_id)
+ON DELETE CASCADE
+
+ON UPDATE Rules
+
+CASCADE
+
+SET NULL
+
+RESTRICT
+
+6. SQL Constraints (Deep)
+NOT NULL
+
+Prevents empty values
+
+username VARCHAR(50) NOT NULL
+
+UNIQUE
+
+Ensures all values are distinct
+
+email VARCHAR(100) UNIQUE
+
+CHECK
+
+Validates conditions
+
+age INT CHECK (age >= 18)
+
+DEFAULT
+
+Assigns default value
+
+status VARCHAR(10) DEFAULT 'active'
+
+7. Indexing & Performance
+
+Primary Key automatically creates an index
+
+Foreign Key indexing improves JOIN performance
+
+Indexing FK is recommended in large tables
+
+CREATE INDEX idx_user_id ON orders(user_id);
+
+8. Common Mistakes
+
+Using mutable data (email, phone) as primary key
+
+Forgetting foreign key constraints
+
+Not indexing foreign keys
+
+Overusing composite keys
+
+Ignoring cascading rules
+
+9. Real-World Use Case
+E-commerce System
+
+users → Primary Key: user_id
+
+orders → Foreign Key: user_id
+
+Prevents orders without valid users
+
+Maintains data integrity across system
+
+10. Summary
+
+Primary Key ensures uniqueness
+
+Foreign Key ensures relationships
+
+Together they form the foundation of relational databases
+
+Proper use leads to scalable, secure, and maintainable systems
