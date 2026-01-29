@@ -1,0 +1,224 @@
+Day 33 – Understanding API and How It Works
+1. What is an API?
+
+An API (Application Programming Interface) is a set of rules and definitions that allows one software application to communicate with another.
+Instead of accessing a database or service directly, applications interact through APIs to request data or trigger actions.
+
+APIs act as an intermediary layer between:
+
+Client (browser, mobile app, frontend)
+
+Server (backend logic, database, services)
+
+This separation improves security, scalability, and maintainability.
+
+2. Why APIs Are Needed
+
+To allow different applications to communicate
+
+To expose specific functionalities without revealing internal logic
+
+To support multi-platform access (web, mobile, IoT)
+
+To enable automation and integration between services
+
+To build scalable and modular systems
+
+3. How an API Works (Request–Response Flow)
+
+Client Request
+
+The client sends a request to an API endpoint
+
+Includes method, headers, parameters, and sometimes a body
+
+API Processing
+
+The API validates the request
+
+Applies authentication and authorization
+
+Executes business logic
+
+Server / Database Interaction
+
+API interacts with database or other services
+
+Fetches, updates, or deletes data
+
+Response Returned
+
+Server sends response back through the API
+
+Usually in JSON or XML format
+
+Includes status codes and data
+
+4. Core API Components
+4.1 Endpoint
+
+A specific URL that represents a resource or action.
+
+Example:
+
+GET /api/users
+POST /api/login
+
+4.2 HTTP Methods
+
+Define the type of operation being performed:
+
+GET → Retrieve data
+
+POST → Send or create data
+
+PUT → Update existing data
+
+DELETE → Remove data
+
+4.3 Request
+
+Contains:
+
+URL
+
+Method
+
+Headers (Content-Type, Authorization)
+
+Parameters (query/path)
+
+Body (for POST/PUT)
+
+4.4 Response
+
+Contains:
+
+Status code
+
+Headers
+
+Response body (data or message)
+
+Common status codes:
+
+200 → OK
+
+201 → Created
+
+400 → Bad Request
+
+401 → Unauthorized
+
+403 → Forbidden
+
+404 → Not Found
+
+500 → Internal Server Error
+
+5. Types of APIs
+5.1 REST API
+
+Most commonly used
+
+Stateless
+
+Uses HTTP methods
+
+Data usually in JSON
+
+5.2 SOAP API
+
+Uses XML
+
+More rigid and secure
+
+Mostly used in enterprise systems
+
+5.3 Internal APIs
+
+Used within an organization
+
+Not publicly exposed
+
+5.4 Public APIs
+
+Accessible to external developers
+
+Often require API keys or tokens
+
+6. Authentication & Authorization in APIs
+
+API Keys – Simple identification
+
+Bearer Tokens – Temporary access tokens
+
+OAuth – Secure delegated access
+
+JWT (JSON Web Tokens) – Stateless authentication
+
+Purpose:
+
+Prevent unauthorized access
+
+Control what users can do
+
+Protect backend resources
+
+7. API Security Considerations
+
+Common risks:
+
+Broken authentication
+
+Excessive data exposure
+
+Lack of rate limiting
+
+Improper input validation
+
+Basic protections:
+
+Authentication & authorization
+
+Input validation
+
+HTTPS
+
+Rate limiting
+
+Logging and monitoring
+
+8. Real-World Example
+
+A food delivery app:
+
+Mobile app → sends request to API
+
+API → fetches restaurant data from database
+
+API → returns menu details to client
+
+User places order → API processes payment and order flow
+
+9. Benefits of Using APIs
+
+Loose coupling between systems
+
+Reusability of services
+
+Platform independence
+
+Faster development
+
+Easier maintenance and scaling
+
+10. Key Takeaways
+
+APIs are the backbone of modern applications
+
+They enable secure and structured communication
+
+Understanding APIs is essential for backend, frontend, and security roles
+
+APIs must be designed with performance and security in mind
