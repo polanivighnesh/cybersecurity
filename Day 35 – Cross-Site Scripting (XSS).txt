@@ -1,0 +1,209 @@
+Day 35 – Cross-Site Scripting (XSS) & Weak Session IDs
+
+Focus: Understanding risks, security concepts, and defensive practices in web applications.
+
+1. Cross-Site Scripting (XSS)
+What is XSS?
+
+Cross-Site Scripting (XSS) is a web application security vulnerability where untrusted input is included in a web page without proper validation or encoding, allowing scripts to execute in a user’s browser.
+
+XSS does not attack the server directly — it exploits the trust between the user and the application.
+
+Why XSS is Dangerous
+
+When XSS exists, an attacker can:
+
+Steal cookies and session tokens
+
+Perform actions on behalf of a logged-in user
+
+Modify page content
+
+Capture sensitive user input
+
+The browser cannot distinguish between trusted code and injected code.
+
+Types of XSS (Conceptual Overview)
+1. Stored XSS
+
+Malicious input is stored on the server (e.g., database, comments)
+
+Delivered to users whenever the page loads
+
+Affects multiple users
+
+2. Reflected XSS
+
+Malicious input is reflected immediately in the response
+
+Often comes from URL parameters or form inputs
+
+Requires user interaction
+
+3. DOM-Based XSS
+
+Occurs entirely in the client-side JavaScript
+
+Vulnerability exists in how the DOM is updated
+
+Server may not be directly involved
+
+Root Causes of XSS
+
+Lack of input validation
+
+Rendering user input directly into HTML
+
+Improper handling of dynamic content
+
+Unsafe JavaScript DOM manipulation
+
+Defensive Security Practices for XSS
+Input Validation
+
+Validate input based on expected format
+
+Reject unexpected characters where possible
+
+Apply validation on both client and server side
+
+Output Encoding (Most Important)
+
+Encode data before displaying it
+
+HTML encode, JavaScript encode, URL encode as needed
+
+Treat all user input as untrusted
+
+Content Security Policy (CSP)
+
+Restricts where scripts can load from
+
+Adds an extra layer of browser-level protection
+
+Secure Framework Usage
+
+Use frameworks that auto-escape output
+
+Avoid unsafe functions that directly inject HTML
+
+2. Weak Session IDs
+What is a Session ID?
+
+A session ID is a unique token used by the server to identify a logged-in user across multiple requests.
+
+It acts as a temporary identity for the user.
+
+What Makes a Session ID Weak?
+
+A session ID is considered weak if it is:
+
+Predictable
+
+Too short
+
+Reused across sessions
+
+Not regenerated after authentication
+
+Transmitted insecurely
+
+Risks of Weak Session IDs
+
+Session hijacking
+
+Unauthorized account access
+
+Privilege escalation
+
+Loss of user trust
+
+If an attacker obtains a valid session ID, they may not need credentials.
+
+Session Hijacking (Conceptual)
+
+Session hijacking occurs when an attacker:
+
+Obtains a valid session token
+
+Reuses it to impersonate a legitimate user
+
+This is often the result, not the root cause.
+
+3. Secure Session Management (Defense)
+Strong Session ID Generation
+
+Use long, random, unpredictable values
+
+Generate session IDs using cryptographically secure functions
+
+Never use sequential or guessable tokens
+
+Session Regeneration
+
+Regenerate session ID:
+
+After login
+
+After privilege change
+
+Prevents session fixation
+
+Session Expiration
+
+Set reasonable session timeouts
+
+Invalidate sessions after inactivity
+
+Destroy sessions on logout
+
+Secure Cookies
+
+Session cookies should use:
+
+HttpOnly → Prevent JavaScript access
+
+Secure → Only over HTTPS
+
+SameSite → Reduce cross-site abuse
+
+HTTPS Enforcement
+
+Encrypts session data in transit
+
+Prevents interception on insecure networks
+
+Mandatory for modern web applications
+
+4. Relationship Between XSS & Session Security
+
+XSS can be used to steal session cookies
+
+Weak session protection amplifies XSS impact
+
+Strong session controls reduce damage even if XSS exists
+
+Security is layered, not isolated.
+
+5. Key Takeaways
+
+XSS exploits trust, not servers
+
+Output encoding is the strongest XSS defense
+
+Session IDs must be treated like passwords
+
+Secure design reduces attack impact
+
+Defense-first thinking is critical in web security
+
+Learning Approach
+
+This study focuses on:
+
+Understanding vulnerabilities conceptually
+
+Defensive coding practices
+
+Secure application design principles
+No exploitation steps included
