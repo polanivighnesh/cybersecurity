@@ -1,0 +1,147 @@
+Day 36 – Cryptography Basics: Outdated vs Secure Encryption
+Introduction
+
+Cryptography is a core concept in cybersecurity used to protect data from unauthorized access. It ensures confidentiality, integrity, authentication, and non-repudiation of information. However, using weak or outdated cryptographic algorithms can compromise data security and lead to serious vulnerabilities.
+
+What is Cryptography?
+
+Cryptography is the process of securing information by transforming readable data (plaintext) into an unreadable format (ciphertext) using mathematical algorithms and keys. Only authorized parties with the correct key can access the original data.
+
+Cryptography is commonly used in:
+
+Secure web communication (HTTPS)
+
+Password storage
+
+Online banking and digital payments
+
+Cloud data protection
+
+Secure file storage and transmission
+
+How Cryptography Works
+
+The basic cryptographic process involves the following steps:
+
+Plaintext: Original readable data
+
+Encryption Algorithm: Converts plaintext into ciphertext
+
+Cryptographic Key: Controls the encryption and decryption process
+
+Ciphertext: Encrypted unreadable data
+
+Decryption: Converts ciphertext back into plaintext using the correct key
+
+This process ensures that data remains protected during storage and transmission.
+
+Outdated Cryptography
+
+Outdated cryptographic algorithms are no longer considered secure due to advancements in computing power and cryptanalysis techniques.
+
+Examples of Outdated Algorithms
+
+MD5
+
+Broken hashing algorithm
+
+Vulnerable to collision attacks
+
+SHA-1
+
+Collision attacks have been demonstrated
+
+DES (56-bit)
+
+Small key size makes it vulnerable to brute-force attacks
+
+RC4
+
+Design flaws and statistical weaknesses
+
+RSA with key sizes less than 2048 bits
+
+Can be brute-forced using modern hardware
+
+Risks of Outdated Cryptography
+
+Passwords can be cracked easily
+
+Sensitive data can be exposed
+
+Man-in-the-middle attacks become possible
+
+Non-compliance with security standards such as GDPR and PCI-DSS
+
+False sense of security in applications
+
+Modern Cryptography
+
+Modern cryptographic algorithms are designed to resist known attacks and are recommended for secure systems.
+
+Examples of Secure Algorithms
+
+AES-256
+
+Strong symmetric encryption standard
+
+RSA-2048 or RSA-4096
+
+Secure asymmetric encryption
+
+Elliptic Curve Cryptography (ECC)
+
+Strong security with smaller key sizes
+
+SHA-256 and SHA-3
+
+Secure hashing algorithms
+
+bcrypt and Argon2
+
+Secure password hashing algorithms
+
+TLS 1.3
+
+Latest secure protocol for web communication
+
+Benefits of Modern Cryptography
+
+High resistance to brute-force and cryptographic attacks
+
+Secure data storage and transmission
+
+Compliance with modern security standards
+
+Widely adopted by enterprises and governments
+
+Comparison: Outdated vs Modern Cryptography
+
+Outdated cryptography relies on weak algorithms and small key sizes, making systems vulnerable to attacks.
+Modern cryptography uses strong algorithms, large key sizes, and secure protocols to protect sensitive data effectively.
+
+Real-World Applications of Modern Cryptography
+
+Secure authentication systems
+
+Encrypted databases
+
+Secure APIs
+
+Cloud security solutions
+
+Digital certificates and signatures
+
+Key Takeaway
+
+Using outdated cryptographic algorithms is a serious security risk. Secure systems must rely on modern cryptography to protect sensitive data and maintain trust.
+
+Learning Outcome
+
+Understood cryptography fundamentals
+
+Learned how encryption and decryption work
+
+Identified outdated and secure cryptographic algorithms
+
+Gained awareness of real-world cryptographic security
