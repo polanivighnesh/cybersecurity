@@ -1,0 +1,147 @@
+Day 39 – Authorization Bypass & Privilege Escalation
+1. Introduction
+
+Authorization bypass is a critical security flaw where an application fails to properly enforce access controls. When authorization checks are weak, missing, or incorrectly implemented, an attacker can access resources or actions beyond their intended permission level.
+This often leads to privilege escalation, where a low-privileged user gains higher privileges such as admin or system-level access.
+
+2. Authorization vs Authentication
+Authentication
+
+Confirms who the user is
+
+Example: Login using username and password
+
+Authorization
+
+Determines what the user is allowed to do
+
+Example: Whether a logged-in user can access admin features
+
+Authorization bypass occurs after authentication, when access rules are not properly validated.
+
+3. What Is Authorization Bypass?
+
+Authorization bypass happens when:
+
+Role-based access checks are missing
+
+Permissions are enforced only on the client side
+
+Backend APIs do not validate user roles properly
+
+Sensitive endpoints rely on predictable parameters
+
+As a result, a normal user may access restricted functionality without proper permissions.
+
+4. Privilege Escalation Explained
+
+Privilege escalation is the outcome of authorization bypass where an attacker:
+
+Moves from low-level access to higher privileges
+
+Gains permissions not originally assigned
+
+Achieves control over sensitive system functionality
+
+Types of Privilege Escalation
+
+Horizontal Privilege Escalation
+Accessing another user’s data with the same privilege level
+
+Vertical Privilege Escalation
+Gaining higher privileges such as admin or superuser
+
+5. Common Causes
+
+Missing authorization checks on backend endpoints
+
+Insecure Direct Object References (IDOR)
+
+Role validation performed only in frontend code
+
+Misconfigured access control lists (ACLs)
+
+Over-privileged user roles
+
+Trusting user-controlled input for role or permission decisions
+
+6. Impact and Severity
+
+Authorization bypass leading to privilege escalation can result in:
+
+Full system compromise
+
+Unauthorized access to sensitive data
+
+Data manipulation or deletion
+
+Account takeover
+
+Business logic abuse
+
+Compliance and legal violations
+
+This vulnerability is considered high to critical severity in most systems.
+
+7. Detection and Testing (Defensive Perspective)
+
+Security testers and developers should:
+
+Test all endpoints with different user roles
+
+Verify backend authorization independently of frontend
+
+Attempt accessing restricted resources as a low-privileged user
+
+Review access control logic during code reviews
+
+Log and monitor unauthorized access attempts
+
+8. Prevention and Mitigation
+Strong Access Control
+
+Enforce authorization checks on the server side
+
+Use centralized access control mechanisms
+
+Principle of Least Privilege
+
+Grant users only the permissions they need
+
+Avoid default admin-level permissions
+
+Secure API Design
+
+Validate user roles for every sensitive request
+
+Avoid exposing internal object identifiers
+
+Defense-in-Depth
+
+Combine authentication, authorization, logging, and monitoring
+
+Regular security audits and penetration testing
+
+9. Key Takeaways
+
+Authorization bypass is more dangerous than authentication flaws
+
+Privilege escalation often results from poor access control design
+
+Backend validation is mandatory for secure systems
+
+Proper authorization protects data, users, and infrastructure
+
+Understanding this vulnerability is essential for secure application development
+
+10. Learning Outcome
+
+This exercise strengthened my understanding of:
+
+Access control vulnerabilities
+
+Real-world impact of authorization flaws
+
+Importance of secure backend authorization
+
+Thinking defensively to design safer systems
