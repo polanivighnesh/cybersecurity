@@ -1,0 +1,266 @@
+Day 41 – Server Setup and Project Deployment
+Introduction
+
+In modern web development and cybersecurity, understanding how servers work is essential. Developers usually create and test applications in a local server environment before deploying them to public servers where users can access them globally. This learning focused on setting up local servers using XAMPP, understanding different server stacks such as WAMP and LAMP, and learning the step-by-step process of deploying applications to public hosting servers.
+
+What is a Server?
+
+A server is a system that provides services, resources, or data to other systems known as clients over a network. In web development, a server stores website files, processes backend code, manages databases, and delivers responses to users through browsers.
+
+Servers mainly perform:
+
+Hosting website files
+
+Processing backend logic
+
+Managing database operations
+
+Handling client requests and responses
+
+Managing authentication and session control
+
+Local Server Environment
+
+A local server is a server that runs on a developer’s own computer. It is mainly used for development and testing before deployment.
+
+Benefits of Local Servers
+
+Safe testing environment
+
+Faster development and debugging
+
+No need for internet hosting during development
+
+Easy configuration and modification
+
+Reduces risk of exposing incomplete applications
+
+XAMPP Server
+
+XAMPP is a cross-platform local server package used for web development.
+
+Components of XAMPP
+
+X – Cross Platform
+A – Apache Server
+M – MySQL (Database Server)
+P – PHP
+P – Perl
+
+Features
+
+Simple installation and configuration
+
+Supports multiple programming languages
+
+Includes database management using phpMyAdmin
+
+Provides Apache server for running websites locally
+
+Useful for beginners and professional developers
+
+Basic Setup Steps
+
+Download XAMPP from the official website.
+
+Install the application and launch the control panel.
+
+Start Apache and MySQL services.
+
+Place project files inside the htdocs folder.
+
+Access the project using:
+
+http://localhost/project-name
+
+Types of Server Stacks
+WAMP
+
+W – Windows
+A – Apache
+M – MySQL
+P – PHP
+
+Used specifically on Windows operating systems.
+
+LAMP
+
+L – Linux
+A – Apache
+M – MySQL
+P – PHP
+
+Widely used in production servers because Linux offers strong performance and stability.
+
+MAMP
+
+M – macOS
+A – Apache
+M – MySQL
+P – PHP
+
+Used for macOS development environments.
+
+Difference Between Local Server and Public Server
+Local Server
+
+Runs on personal computer
+
+Used for development and testing
+
+Accessible only locally
+
+Faster debugging and experimentation
+
+Public Server
+
+Hosted on internet infrastructure
+
+Accessible globally
+
+Used for production deployment
+
+Requires hosting and domain configuration
+
+Project Deployment to Public Servers
+
+Deployment is the process of making an application available on the internet for public use.
+
+Step 1 – Choose a Hosting Provider
+
+Hosting providers supply server infrastructure for storing and running web applications.
+
+Types of Hosting
+
+Shared Hosting
+
+VPS Hosting
+
+Dedicated Hosting
+
+Cloud Hosting
+
+Factors to Consider
+
+Performance and speed
+
+Security features
+
+Scalability
+
+Customer support
+
+Pricing
+
+Step 2 – Register a Domain Name
+
+A domain name is the public address of a website.
+
+Example:
+
+www.example.com
+
+
+The domain must be linked to the hosting server through DNS configuration.
+
+Step 3 – Configure Server Environment
+
+Server configuration includes:
+
+Setting up runtime environments
+
+Configuring FTP or SSH access
+
+Setting file permissions
+
+Configuring server ports
+
+Installing required dependencies
+
+Step 4 – Upload Website Files
+
+Website files must be transferred from local machine to the hosting server.
+
+Methods
+
+FTP Clients (FileZilla, WinSCP)
+
+Git-based deployment
+
+Hosting control panel file managers
+
+Files are typically uploaded into:
+
+public_html
+
+
+or
+
+www
+
+
+directory
+
+Step 5 – Setup and Configure Database
+
+Database deployment involves:
+
+Creating database in hosting panel
+
+Importing local database using SQL dump
+
+Updating database connection credentials in project files
+
+Testing database connectivity
+
+Step 6 – Testing and Launching the Website
+
+Before going live:
+
+Verify all pages load correctly
+
+Test database operations
+
+Check authentication and sessions
+
+Validate file upload functionality
+
+Confirm API and backend services
+
+Perform security checks
+
+After successful testing, the website becomes publicly accessible.
+
+Security Considerations During Deployment
+
+Use strong database credentials
+
+Disable debugging mode in production
+
+Secure configuration files
+
+Implement HTTPS using SSL certificates
+
+Restrict file permissions
+
+Regularly update dependencies and server software
+
+Monitor logs and server activities
+
+Importance in Cybersecurity
+
+Understanding server deployment helps security professionals:
+
+Identify server misconfigurations
+
+Detect exposed services and ports
+
+Analyze web application attack surfaces
+
+Improve infrastructure security
+
+Perform vulnerability assessments
+
+Conclusion
+
+Learning server setup and deployment bridges the gap between development and real-world production environments. XAMPP and other server stacks help developers build and test applications locally, while deployment knowledge ensures applications can run securely and efficiently on public servers. Mastering server environments is a crucial skill for both developers and cybersecurity professionals.
