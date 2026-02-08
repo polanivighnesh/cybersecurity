@@ -1,0 +1,188 @@
+Day 43 – Understanding Ransomware Attacks and Detecting System Compromise
+Introduction
+
+Ransomware is a type of malicious software designed to block access to systems or encrypt sensitive data until a ransom is paid. It is one of the most financially damaging and rapidly growing cyber threats affecting individuals, businesses, and government organizations worldwide.
+
+Understanding ransomware is important not only for cybersecurity professionals but also for general users because early detection can prevent data loss, financial damage, and operational disruption.
+
+What is Ransomware
+
+Ransomware is a form of malware that encrypts files or locks a system and demands payment from the victim in exchange for restoring access. Attackers usually demand ransom payments in cryptocurrency to remain anonymous.
+
+Primary Objectives of Ransomware
+
+Encrypt user or organizational data
+
+Deny access to systems or files
+
+Force victims to pay ransom
+
+Steal sensitive data for extortion (Double Extortion Attacks)
+
+Common Types of Ransomware
+1. Crypto Ransomware
+
+Encrypts files and prevents access until payment is made.
+
+2. Locker Ransomware
+
+Locks users out of their devices or operating systems.
+
+3. Scareware
+
+Displays fake warnings or alerts claiming system infection to force payment.
+
+4. Double Extortion Ransomware
+
+Attackers encrypt data and threaten to leak stolen data if ransom is not paid.
+
+How Ransomware Spreads
+
+Ransomware attacks typically rely on social engineering and software vulnerabilities.
+
+Phishing Emails
+
+Malicious attachments or links
+
+Fake urgent messages or impersonation attacks
+
+Malicious Downloads
+
+Software from untrusted sources
+
+Pirated or cracked applications
+
+Exploiting Vulnerabilities
+
+Outdated software or operating systems
+
+Weak or misconfigured security controls
+
+Remote Desktop Protocol (RDP) Attacks
+
+Weak credentials allow attackers remote system access
+
+Drive-by Downloads
+
+Visiting compromised or malicious websites
+
+Signs That a System Might Be Compromised
+Suspicious Emails or Messages
+
+Receiving unexpected messages or attachments from known or unknown sources.
+
+Slow System Performance
+
+Sudden device lag, frequent crashes, or unusual resource usage.
+
+Unusual Login Activity
+
+Login alerts from unknown devices or geographic locations.
+
+Security Tools Disabled
+
+Antivirus or firewall services turning off without user permission.
+
+Unexpected File Changes
+
+Files renamed, encrypted, or inaccessible.
+
+Unauthorized Transactions or Messages
+
+Banking activity or messages sent without user knowledge.
+
+Ransomware Attack Lifecycle (High-Level)
+Initial Access
+
+Attackers gain entry using phishing, vulnerabilities, or weak credentials.
+
+Payload Delivery
+
+Malware is installed or executed on the victim’s system.
+
+Data Encryption or System Locking
+
+Files are encrypted using strong encryption algorithms.
+
+Ransom Demand
+
+Attackers display payment instructions and threats.
+
+Data Exfiltration (In Advanced Attacks)
+
+Sensitive data is stolen before encryption.
+
+Impact of Ransomware Attacks
+Data Loss
+
+Important files or sensitive organizational data become inaccessible.
+
+Financial Damage
+
+Organizations suffer ransom payments, recovery costs, and operational losses.
+
+Reputation Damage
+
+Loss of customer trust and business credibility.
+
+Operational Disruption
+
+Business activities or services may be halted.
+
+Prevention Strategies
+Strong Password Practices
+
+Use complex passwords and multi-factor authentication.
+
+Regular Data Backup
+
+Maintain offline and secure backup copies of important data.
+
+Software Updates
+
+Apply security patches and updates regularly.
+
+Email Awareness Training
+
+Avoid clicking unknown links or downloading suspicious attachments.
+
+Endpoint Protection
+
+Install and maintain updated antivirus and endpoint detection solutions.
+
+Network Segmentation
+
+Limit attacker movement within organizational networks.
+
+Incident Response Steps If Infected
+Disconnect from Network
+
+Prevent ransomware from spreading to other systems.
+
+Identify the Infection Source
+
+Analyze entry points such as email attachments or vulnerabilities.
+
+Preserve Evidence
+
+Avoid deleting logs or system data useful for investigation.
+
+Restore from Backup
+
+Recover data using secure backup copies.
+
+Report the Incident
+
+Notify IT teams or cybersecurity authorities.
+
+Ethical and Educational Importance
+
+Studying ransomware attacks helps cybersecurity professionals:
+
+Understand modern cyber threat techniques
+
+Design better defensive mechanisms
+
+Educate users about cyber awareness
+
+Strengthen organizational security posture
