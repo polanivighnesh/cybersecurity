@@ -1,0 +1,195 @@
+Day 48 – Understanding Man in the Middle (MITM) Attack
+1. Introduction
+
+A Man in the Middle (MITM) attack is a type of cyber attack where an attacker secretly intercepts and possibly alters communication between two parties who believe they are directly communicating with each other.
+
+The attacker positions themselves between:
+
+Client (Victim) ↔ Attacker ↔ Server
+
+The main objective is to eavesdrop, steal sensitive data, manipulate communication, or impersonate one of the parties.
+
+2. Why MITM Attacks Are Performed
+
+Data Theft
+Attackers attempt to capture credentials, session cookies, banking information, or personal data.
+
+Session Hijacking
+Stealing active session tokens to gain unauthorized access without knowing the password.
+
+Financial Fraud
+Modifying transaction details in banking or payment communications.
+
+Espionage
+Monitoring confidential communications in corporate or public networks.
+
+Malware Injection
+Injecting malicious scripts or files into legitimate responses.
+
+3. How MITM Attacks Work
+Step 1: Positioning Between Victim and Server
+
+The attacker must first intercept traffic. This is usually done in local networks such as public Wi-Fi or compromised LAN environments.
+
+Common techniques:
+
+ARP Spoofing
+
+DNS Spoofing
+
+Rogue Access Points
+
+IP Spoofing
+
+Step 2: Traffic Interception
+
+Once positioned, the attacker captures packets transmitted between the victim and the server.
+
+If traffic is unencrypted (HTTP), the attacker can directly read sensitive data.
+
+If traffic is encrypted (HTTPS), attackers may attempt:
+
+SSL stripping
+
+Certificate spoofing
+
+Downgrade attacks
+
+Step 3: Manipulation or Forwarding
+
+The attacker can:
+
+Forward packets without modification (passive attack).
+
+Modify content before sending to the destination (active attack).
+
+4. Types of MITM Attacks
+
+ARP Spoofing
+The attacker sends forged ARP responses to associate their MAC address with the IP address of the gateway.
+
+DNS Spoofing
+The attacker redirects the victim to a malicious website by poisoning DNS responses.
+
+SSL Stripping
+The attacker downgrades HTTPS connections to HTTP to capture unencrypted data.
+
+Session Hijacking
+The attacker steals session cookies to impersonate the user.
+
+5. Tools Used in MITM (Educational / Security Research Purpose)
+1. Wireshark
+
+Purpose:
+
+Packet capturing and network traffic analysis.
+
+How it is used:
+
+Capture live network packets.
+
+Filter traffic (HTTP, DNS, TCP).
+
+Analyze transmitted credentials or sensitive data (in unsecured networks).
+
+Role:
+Wireshark itself does not perform attacks but helps in analyzing traffic during security testing.
+
+2. Ettercap
+
+Purpose:
+
+Network sniffing and MITM attack simulation.
+
+How it is used:
+
+Perform ARP poisoning.
+
+Intercept and modify traffic.
+
+Capture credentials in local networks.
+
+Role:
+Commonly used in penetration testing labs to demonstrate ARP-based MITM attacks.
+
+3. SSLStrip
+
+Purpose:
+
+Downgrade HTTPS connections to HTTP.
+
+How it is used:
+
+Intercept HTTPS requests.
+
+Replace secure links with HTTP.
+
+Capture data transmitted without encryption.
+
+Limitation:
+Modern browsers implement HSTS (HTTP Strict Transport Security), reducing effectiveness.
+
+4. ARPspoof
+
+Purpose:
+
+Perform ARP cache poisoning.
+
+How it is used:
+
+Send fake ARP replies.
+
+Convince victim that attacker’s MAC address is the gateway.
+
+Redirect traffic through attacker’s device.
+
+6. Impact of MITM Attacks
+
+Credential theft
+
+Financial loss
+
+Data breaches
+
+Identity theft
+
+Reputation damage to organizations
+
+Compromise of confidential communications
+
+7. How to Prevent MITM Attacks
+
+Use HTTPS Everywhere
+Ensure websites use strong TLS encryption.
+
+Enable HSTS
+Prevent downgrade attacks like SSL stripping.
+
+Use VPN on Public Wi-Fi
+Encrypt all outgoing traffic.
+
+Implement Certificate Pinning
+Prevent fake certificate attacks.
+
+Use Secure Wi-Fi (WPA3)
+Avoid open networks.
+
+Enable Multi-Factor Authentication
+Reduce impact even if credentials are stolen.
+
+Monitor ARP Tables in Enterprise Networks
+Detect abnormal ARP behavior.
+
+8. Key Learning Outcome
+
+Understanding how MITM attacks work helps in:
+
+Strengthening network security
+
+Designing secure communication systems
+
+Identifying vulnerabilities in real-world environments
+
+Becoming a better cybersecurity professional
+
+Learning attacks is not about exploiting systems, but about understanding weaknesses to build stronger defenses.
