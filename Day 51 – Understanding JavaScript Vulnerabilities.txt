@@ -1,0 +1,228 @@
+Day 51 – Understanding JavaScript Vulnerabilities
+Introduction
+
+JavaScript is the backbone of modern web applications. It enables dynamic content, interactive UI, real-time updates, and API communication. However, improper handling of user input, insecure coding practices, and weak validation mechanisms can introduce serious security vulnerabilities.
+
+Understanding JavaScript-related vulnerabilities is critical for building secure front-end and full-stack applications.
+
+1. Cross-Site Scripting (XSS)
+What is XSS?
+
+Cross-Site Scripting (XSS) occurs when an attacker injects malicious scripts into a trusted website. These scripts are executed in the victim’s browser.
+
+Instead of attacking the server directly, XSS targets users.
+
+Types of XSS
+
+Stored XSS
+Malicious script is permanently stored in the database (e.g., comment section).
+
+Reflected XSS
+Script is reflected from user input (e.g., search bar).
+
+DOM-Based XSS
+Vulnerability exists in client-side JavaScript.
+
+Example
+<input type="text" id="name">
+<button onclick="showName()">Submit</button>
+
+<script>
+function showName() {
+  let name = document.getElementById("name").value;
+  document.body.innerHTML = "Hello " + name;
+}
+</script>
+
+
+If a user enters:
+
+<script>alert("Hacked")</script>
+
+
+The script executes.
+
+Impact
+
+Cookie theft
+
+Session hijacking
+
+Account takeover
+
+Keylogging
+
+Redirecting users to malicious sites
+
+Prevention
+
+Input validation
+
+Output encoding
+
+Use Content Security Policy (CSP)
+
+Avoid innerHTML
+
+Use frameworks that auto-escape (React, Angular)
+
+2. Cross-Site Request Forgery (CSRF)
+What is CSRF?
+
+CSRF tricks authenticated users into performing unwanted actions on a web application.
+
+The attack works because browsers automatically include cookies in requests.
+
+Example Scenario
+
+User logs into banking website.
+
+Attacker sends malicious link.
+
+When user clicks, money transfer request is triggered automatically.
+
+Example Attack
+<img src="https://bank.com/transfer?amount=1000&to=attacker">
+
+
+If the user is logged in, the transfer happens.
+
+Impact
+
+Unauthorized transactions
+
+Password changes
+
+Email changes
+
+Data modification
+
+Prevention
+
+CSRF tokens
+
+SameSite cookies
+
+Re-authentication for sensitive actions
+
+Double-submit cookies
+
+3. DOM Manipulation Vulnerabilities
+What is DOM?
+
+DOM (Document Object Model) represents the structure of a webpage.
+
+JavaScript can modify the DOM dynamically.
+
+Improper DOM handling can introduce security risks.
+
+Vulnerable Code Example
+document.getElementById("output").innerHTML = location.hash;
+
+
+If URL contains:
+
+#<script>alert(1)</script>
+
+
+Script executes.
+
+Impact
+
+Client-side XSS
+
+Content injection
+
+UI redressing
+
+Prevention
+
+Avoid innerHTML
+
+Use textContent instead
+
+Sanitize inputs
+
+Use secure DOM APIs
+
+4. Open Redirect
+What is Open Redirect?
+
+Open Redirect occurs when a website redirects users to a URL specified in user input without validation.
+
+Vulnerable Example
+let redirectURL = new URLSearchParams(window.location.search).get("next");
+window.location = redirectURL;
+
+
+Attacker can send:
+
+https://example.com?next=https://malicious.com
+
+
+User is redirected to malicious site.
+
+Impact
+
+Phishing attacks
+
+Malware distribution
+
+Loss of user trust
+
+Prevention
+
+Validate redirect URLs
+
+Use allowlist of domains
+
+Avoid direct redirection from user input
+
+Additional JavaScript Security Risks
+1. Insecure Dependencies
+
+Many JavaScript applications use third-party libraries via npm. Vulnerabilities in dependencies can compromise the entire application.
+
+Prevention:
+
+Regular updates
+
+Use npm audit
+
+Monitor CVE reports
+
+2. Sensitive Data Exposure
+
+Storing tokens in localStorage makes them accessible via XSS.
+
+Better practice:
+
+Use HttpOnly cookies
+
+Avoid exposing secrets in frontend code
+
+Best Practices for Secure JavaScript Development
+
+Validate all user inputs
+
+Sanitize data before rendering
+
+Avoid inline JavaScript
+
+Implement Content Security Policy
+
+Keep dependencies updated
+
+Use HTTPS everywhere
+
+Apply secure authentication mechanisms
+
+Perform regular security testing
+
+Conclusion
+
+JavaScript vulnerabilities mainly arise due to improper input handling, insecure DOM manipulation, and weak validation mechanisms.
+
+Security is not a feature added later — it must be integrated during development.
+
+Understanding how attacks work helps developers write safer code and build more resilient applications.
