@@ -1,0 +1,252 @@
+Day 53 – Broken Access Control
+1. What is Broken Access Control?
+
+Broken Access Control occurs when an application fails to properly enforce restrictions on what authenticated users are allowed to do.
+
+Access control ensures that users can only:
+
+Access data they are authorized to view
+
+Perform actions they are permitted to execute
+
+Modify resources they own
+
+When these checks are missing, weak, or improperly implemented, attackers can exploit the system to gain unauthorized access.
+
+According to OWASP Top 10, Broken Access Control is one of the most critical web application vulnerabilities.
+
+2. Types of Access Control
+2.1 Vertical Access Control
+
+Prevents users from performing actions reserved for higher privilege roles.
+
+Example:
+
+A normal user accessing /admin/dashboard
+
+A user modifying role=admin in a request
+
+If the server does not verify roles properly, privilege escalation occurs.
+
+2.2 Horizontal Access Control
+
+Prevents users from accessing other users’ resources.
+
+Example:
+
+User A accessing:
+GET /api/orders/123
+
+Changing ID to:
+GET /api/orders/124
+
+If order 124 belongs to another user and is still accessible, this is an IDOR vulnerability.
+
+2.3 Context-Dependent Access Control
+
+Prevents users from performing actions outside allowed workflow.
+
+Example:
+
+Accessing payment confirmation before completing payment
+
+Bypassing multi-step verification processes
+
+3. Common Broken Access Control Vulnerabilities
+
+Insecure Direct Object Reference (IDOR)
+
+Privilege escalation
+
+Forced browsing
+
+Missing role validation
+
+Insecure API endpoint exposure
+
+JWT manipulation
+
+Parameter tampering
+
+4. Tools Used for Testing Broken Access Control
+4.1 Burp Suite
+
+Used to intercept and modify HTTP requests.
+
+How it helps:
+
+Change user IDs
+
+Modify roles in requests
+
+Replay requests as different users
+
+Analyze session tokens
+
+Key Features:
+
+Proxy
+
+Repeater
+
+Intruder
+
+Decoder
+
+4.2 OWASP ZAP
+
+Open-source web vulnerability scanner.
+
+How it helps:
+
+Automated scanning
+
+Manual request modification
+
+Detecting access control misconfigurations
+
+4.3 Postman
+
+API testing tool.
+
+How it helps:
+
+Send requests with different user tokens
+
+Test role-based access controls
+
+Verify authorization headers
+
+Example:
+Test same endpoint with:
+
+User token
+
+Admin token
+
+No token
+
+Compare responses.
+
+4.4 Acunetix
+
+Automated web vulnerability scanner.
+
+How it helps:
+
+Identifies IDOR
+
+Detects missing access controls
+
+Scans API endpoints
+
+4.5 JWT Toolkit
+
+Used to analyze and manipulate JSON Web Tokens.
+
+How it helps:
+
+Decode JWT
+
+Modify payload
+
+Test algorithm confusion
+
+Check signature validation
+
+Example attack:
+Change role from "user" to "admin" and re-sign or remove signature.
+
+If accepted → Access control failure.
+
+5. Practical Testing Methodology
+
+Step 1: Identify endpoints
+
+/admin
+
+/api/users
+
+/profile?id=1001
+
+Step 2: Intercept requests
+Use Burp Suite proxy.
+
+Step 3: Modify parameters
+
+Change user ID
+
+Change role
+
+Remove authorization header
+
+Step 4: Observe server response
+
+200 OK → Vulnerable
+
+403 Forbidden → Secure
+
+Step 5: Test with different user accounts
+Compare access levels.
+
+6. Root Causes of Broken Access Control
+
+Access control checks only on frontend
+
+No server-side role validation
+
+Predictable resource IDs
+
+Insecure direct object references
+
+Weak session management
+
+Improper JWT validation
+
+7. Prevention Techniques
+
+Enforce access control on server side
+
+Use Role-Based Access Control (RBAC)
+
+Use Attribute-Based Access Control (ABAC)
+
+Validate ownership of resources
+
+Implement deny-by-default policy
+
+Use indirect object references
+
+Properly validate JWT signatures
+
+Log and monitor access control failures
+
+8. Real-World Impact
+
+Broken access control can lead to:
+
+Data breaches
+
+Account takeover
+
+Financial loss
+
+Regulatory violations
+
+Reputation damage
+
+Many large-scale breaches occurred due to IDOR and privilege escalation flaws.
+
+9. Key Learning Outcome – Day 53
+
+Today I learned that:
+
+Authentication is not enough; authorization is critical.
+
+Access control must be enforced on the server.
+
+Testing requires both manual and automated approaches.
+
+Even small misconfigurations can expose sensitive data.
+
+Understanding Broken Access Control is essential for becoming a skilled penetration tester and secure application developer.
