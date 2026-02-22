@@ -1,0 +1,207 @@
+Day 56 – Cryptographic Failures
+Data Exposure Due to Weak or Missing Encryption
+Introduction
+
+Cryptographic failures occur when sensitive data is not properly protected through secure encryption mechanisms. These failures can expose confidential information such as passwords, financial data, API keys, personal records, and business secrets.
+
+Unlike active attacks (like SQL Injection or XSS), cryptographic failures often result from misconfiguration, outdated algorithms, improper key management, or complete absence of encryption.
+
+This vulnerability is recognized in the OWASP Top 10 under Cryptographic Failures.
+
+What is Encryption?
+
+Encryption is the process of converting readable data (plaintext) into unreadable data (ciphertext) using mathematical algorithms and cryptographic keys.
+
+Only authorized parties with the correct key can decrypt and access the original data.
+
+Encryption protects:
+
+Data in transit (e.g., HTTPS communication)
+
+Data at rest (e.g., database storage)
+
+Data in processing (advanced secure environments)
+
+Types of Cryptography
+1. Symmetric Encryption
+
+Uses the same key for encryption and decryption.
+
+Fast and efficient.
+
+Example: AES (Advanced Encryption Standard)
+
+2. Asymmetric Encryption
+
+Uses a public key and private key pair.
+
+Used in secure communications and digital signatures.
+
+Example: RSA, ECC
+
+3. Hashing
+
+One-way function.
+
+Used to store passwords securely.
+
+Example: bcrypt, Argon2
+
+Common Causes of Cryptographic Failures
+1. Weak Algorithms
+
+Using outdated algorithms like:
+
+MD5
+
+SHA1
+
+DES
+
+These algorithms are vulnerable to collision and brute-force attacks.
+
+2. Storing Passwords in Plaintext
+
+If a database is compromised, attackers gain immediate access to user credentials.
+
+3. Missing HTTPS (No TLS)
+
+Without TLS, attackers can intercept data via:
+
+Man-in-the-Middle (MITM) attacks
+
+Packet sniffing
+
+4. Hardcoded Cryptographic Keys
+
+Embedding secret keys directly in source code makes them easy to extract.
+
+5. Improper Certificate Validation
+
+Accepting invalid or self-signed certificates without verification increases attack surface.
+
+6. No Encryption for Data at Rest
+
+Sensitive database fields stored without encryption can be exposed during breaches.
+
+Real-World Impact
+
+Cryptographic failures can result in:
+
+Massive data breaches
+
+Identity theft
+
+Financial fraud
+
+Regulatory penalties (GDPR, HIPAA violations)
+
+Reputational damage
+
+Loss of customer trust
+
+Example consequences seen in breaches affecting companies like
+Equifax and Yahoo involved improper data protection mechanisms.
+
+How Encryption Works (Technical Overview)
+
+User sends data to server.
+
+TLS establishes a secure handshake.
+
+Session keys are generated.
+
+Data is encrypted before transmission.
+
+Server decrypts using appropriate keys.
+
+For stored passwords:
+
+User enters password.
+
+Password is hashed using bcrypt/Argon2.
+
+Hash is stored (not the actual password).
+
+During login, entered password is hashed again and compared.
+
+Tools and Technologies Used to Prevent Cryptographic Failures
+Secure Communication
+
+TLS 1.2+
+
+HTTPS
+
+OpenSSL
+
+Strong Encryption Standards
+
+AES-256
+
+RSA-2048
+
+ECC
+
+Secure Password Hashing
+
+bcrypt
+
+Argon2
+
+PBKDF2
+
+Key Management
+
+Hardware Security Modules (HSM)
+
+Cloud Key Management Services
+
+Secure vault systems
+
+Vulnerability Scanning Tools
+
+Burp Suite
+
+Nessus
+
+OpenVAS
+
+Best Practices to Prevent Cryptographic Failures
+
+Always use industry-approved encryption standards.
+
+Enforce HTTPS across the entire application.
+
+Hash passwords with adaptive hashing algorithms.
+
+Rotate and securely store cryptographic keys.
+
+Avoid building custom cryptographic algorithms.
+
+Regularly audit encryption configurations.
+
+Disable weak cipher suites.
+
+Developer Security Checklist
+
+No plaintext sensitive data in database.
+
+No secrets in source code.
+
+TLS enabled and properly configured.
+
+Strong hashing for authentication.
+
+Secure certificate validation.
+
+Secure backup encryption.
+
+Conclusion
+
+Cryptographic security is not optional in modern software development.
+It is a foundational requirement for protecting confidentiality, integrity, and trust.
+
+Weak or missing encryption turns even the most advanced applications into vulnerable systems.
+
+Security is not just about preventing attacks.
+It is about ensuring data remains protected at every stage — in transit, at rest, and during processing.
