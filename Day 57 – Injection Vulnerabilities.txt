@@ -1,0 +1,191 @@
+Day 57 – Injection Vulnerabilities & Prevention
+Injection Vulnerabilities – Detailed Study
+Introduction
+
+Injection vulnerabilities occur when untrusted user input is passed to an interpreter as part of a command or query. The interpreter executes the input as code instead of treating it as data. This allows attackers to manipulate queries, execute unintended commands, bypass authentication, or access sensitive data.
+
+Injection remains one of the most critical risks in web application security because it directly impacts data confidentiality, integrity, and system availability.
+
+Types of Injection Studied
+1. SQL Injection
+
+SQL Injection occurs when user input is concatenated directly into SQL queries without proper validation or parameterization.
+
+Educational Lab Setup
+
+Built a vulnerable login form.
+
+Used dynamic SQL query construction.
+
+Tested payloads such as:
+
+' OR '1'='1
+
+What Happened
+
+The input altered the query logic and bypassed authentication.
+Instead of validating credentials, the database returned all records.
+
+Secure Implementation
+
+Replaced dynamic queries with parameterized queries.
+
+Used prepared statements.
+
+Applied input validation.
+
+Restricted database privileges.
+
+2. NoSQL Injection
+
+NoSQL Injection occurs when user-controlled input manipulates NoSQL query structures (commonly in JSON-based databases like MongoDB).
+
+Educational Lab Setup
+
+Created a simple authentication API using MongoDB.
+
+Passed raw JSON input directly into database queries.
+
+Tested operator-based payload manipulation such as:
+
+{ "username": { "$ne": null } }
+
+What Happened
+
+The injected operator changed query behavior and bypassed authentication checks.
+
+Secure Implementation
+
+Enforced strict schema validation.
+
+Sanitized inputs.
+
+Avoided passing raw user JSON directly to queries.
+
+Used ODM libraries for safer query handling.
+
+3. OS Command Injection
+
+OS Command Injection occurs when applications execute system commands using unsanitized user input.
+
+Educational Lab Setup
+
+Built a testing environment where user input was appended to a system command.
+
+Tested chaining operators like:
+
+&&
+;
+
+What Happened
+
+The input allowed execution of additional unintended system commands.
+
+Secure Implementation
+
+Avoided direct shell execution.
+
+Used safe system APIs instead of shell calls.
+
+Applied strict allowlists for acceptable input.
+
+Restricted process-level permissions.
+
+Root Cause Analysis
+
+Injection vulnerabilities occur due to:
+
+Mixing code and data.
+
+Lack of input validation.
+
+Direct query concatenation.
+
+Excessive trust in client-side validation.
+
+Overprivileged database or system accounts.
+
+The core issue is improper separation between instructions and user-controlled data.
+
+Prevention Techniques – Deep Explanation
+1. Parameterized Queries
+
+Parameterized queries separate query structure from user input.
+The database treats input strictly as data, not executable code.
+
+This completely eliminates SQL injection when properly implemented.
+
+2. Input Validation and Sanitization
+
+All inputs should be validated against expected formats:
+
+Length restrictions
+
+Type enforcement
+
+Whitelisting allowed characters
+
+Rejecting unexpected patterns
+
+Validation should be server-side.
+
+3. ORM Usage
+
+Object-Relational Mapping libraries abstract database queries.
+They reduce direct query manipulation and enforce safer query building practices.
+
+However, improper ORM usage can still introduce vulnerabilities if raw queries are used.
+
+4. Least Privilege Principle
+
+Database accounts and application services should only have minimal required permissions.
+
+For example:
+
+Login functionality should not have DROP or DELETE permissions.
+
+System-level commands should not run with root/admin access.
+
+Limiting privileges reduces impact even if injection occurs.
+
+5. Web Application Firewalls (WAF)
+
+WAFs inspect incoming traffic and detect malicious patterns such as:
+
+Suspicious SQL operators
+
+Command chaining symbols
+
+Known attack signatures
+
+WAFs provide an additional defense layer but should not replace secure coding practices.
+
+6. Avoid Direct Command Execution
+
+Applications should:
+
+Avoid executing shell commands directly.
+
+Use built-in APIs.
+
+Avoid passing raw input into system-level calls.
+
+Command execution should be isolated and controlled.
+
+Key Security Lessons Learned
+
+Injection is not a complex attack — it exploits simple coding mistakes.
+
+Secure coding prevents injection more effectively than reactive patching.
+
+Defense-in-depth is essential.
+
+Input should never be trusted.
+
+Security must be integrated at development stage, not after deployment.
+
+Conclusion
+
+Injection vulnerabilities demonstrate the importance of separating user input from executable logic. Through practical lab simulations and secure refactoring, the risk can be completely mitigated using structured query handling, validation, and proper access control mechanisms.
+
+Understanding injection is fundamental for secure application development and defensive cybersecurity practices.
