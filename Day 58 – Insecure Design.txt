@@ -1,0 +1,222 @@
+Day 58 – Insecure Design
+1. What is Insecure Design?
+
+Insecure Design refers to security weaknesses introduced during the architecture or design phase of a system, not necessarily during coding.
+
+It is not just about bugs — it is about flawed logic, missing security controls, and incorrect trust assumptions.
+
+Unlike implementation flaws, insecure design cannot be fixed by simple patching. It requires redesign or architectural correction.
+
+This category is highlighted in the OWASP Top 10 because many modern attacks exploit business logic weaknesses rather than coding errors.
+
+2. How Insecure Design Happens
+1. No Threat Modeling
+
+Developers fail to identify potential attackers and attack surfaces.
+
+No analysis of misuse cases or abuse scenarios.
+
+2. Weak Authentication Architecture
+
+No multi-factor authentication.
+
+Poor session management design.
+
+No account lockout mechanism.
+
+3. Missing Input Validation Strategy
+
+No centralized validation.
+
+Trusting client-side validation.
+
+No sanitization policy.
+
+4. Lack of Security Requirements
+
+Functional requirements defined.
+
+Security requirements ignored.
+
+5. Over-Trusting User Inputs
+
+Assuming internal users are safe.
+
+No authorization checks between components.
+
+6. Poor Business Logic Design
+
+Payment bypass flaws.
+
+Coupon abuse logic.
+
+Privilege escalation through workflow manipulation.
+
+3. Why It Is Dangerous
+
+Attackers exploit logic flaws that automated scanners may miss.
+
+Fixing design flaws in production is costly.
+
+Leads to:
+
+Broken access control
+
+Authentication bypass
+
+Data leakage
+
+Privilege escalation
+
+Financial fraud
+
+Security must be proactive, not reactive.
+
+4. Example of Insecure Design
+Scenario: E-commerce Checkout System
+
+Design Flaw:
+
+The system trusts the price sent from the client-side.
+
+No server-side validation of total amount.
+
+No verification of product integrity.
+
+Attack:
+
+User modifies price using browser developer tools.
+
+Pays ₹10 instead of ₹10,000.
+
+Root Cause:
+
+Trusting client input.
+
+No server-side integrity validation.
+
+Missing threat modeling.
+
+5. How to Fix Insecure Design
+1. Implement Threat Modeling
+
+Identify assets.
+
+Identify threats.
+
+Identify attack vectors.
+
+Design mitigations before coding.
+
+Use models like:
+
+STRIDE
+
+DREAD
+
+Attack trees
+
+2. Secure by Design Principles
+
+Least Privilege
+
+Defense in Depth
+
+Fail Securely
+
+Zero Trust Architecture
+
+Separation of Duties
+
+3. Define Security Requirements Early
+
+Add security requirements alongside functional requirements:
+
+Example:
+
+The system must enforce MFA.
+
+All sensitive data must be encrypted.
+
+All inputs must be validated server-side.
+
+4. Secure Architecture Review
+
+Before development:
+
+Conduct design review meetings.
+
+Perform architecture risk analysis.
+
+Identify trust boundaries.
+
+5. Use Secure Design Patterns
+
+Centralized Authentication Service
+
+Input Validation Layer
+
+Secure Session Management
+
+Rate Limiting
+
+Logging and Monitoring
+
+6. Example of Good Secure Design
+Secure Login System
+
+Good Design Includes:
+
+Strong password policy
+
+Multi-factor authentication (MFA)
+
+Secure session tokens
+
+Server-side validation
+
+Account lockout after failed attempts
+
+Rate limiting
+
+Logging suspicious behavior
+
+Architecture:
+
+User → Authentication Layer → Authorization Layer → Application Logic → Database
+
+Each layer enforces security controls independently.
+
+7. Insecure Design vs Implementation Bug
+Insecure Design	Implementation Bug
+Flawed architecture	Coding mistake
+Missing security controls	Incorrect logic
+Hard to fix	Easier to patch
+System-wide impact	Localized issue
+8. Prevention Checklist
+
+Perform threat modeling before coding.
+
+Define security requirements.
+
+Do not trust client-side inputs.
+
+Apply least privilege everywhere.
+
+Validate all inputs server-side.
+
+Use defense in depth.
+
+Conduct architecture security reviews.
+
+Regularly update and patch systems.
+
+9. Key Takeaway
+
+Security is not a feature added later.
+It is a foundation built during design.
+
+If the design is insecure,
+the entire system becomes vulnerable — no matter how clean the code is.
+
+Build secure from the blueprint.
