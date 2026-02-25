@@ -1,0 +1,289 @@
+Day 60 – Software or Data Integrity Failures
+Introduction
+
+Software or Data Integrity Failures occur when applications fail to verify the integrity of code, configurations, updates, or stored data.
+
+Integrity ensures that:
+
+Code has not been modified
+
+Data has not been tampered with
+
+Dependencies are trusted
+
+Updates are authentic
+
+If integrity verification is missing or improperly implemented, attackers can inject malicious code, manipulate data, or compromise entire systems.
+
+This category is strongly related to supply chain attacks and insecure update mechanisms.
+
+How Integrity Mechanisms Work
+Hashing
+
+A hash function converts data into a fixed-length value.
+
+Example:
+
+Original File → SHA-256 → 3f785a9c...
+
+If even a single bit changes:
+
+Modified File → SHA-256 → a98cd123...
+
+Different hash means the data has been modified.
+
+Secure hashing algorithms:
+
+SHA-256
+
+SHA-512
+
+BLAKE2
+
+Weak algorithms that should not be used:
+
+MD5
+
+SHA-1
+
+Digital Signatures
+
+Digital signatures verify both authenticity and integrity.
+
+Process:
+
+Developer signs code using a private key.
+
+The system verifies the signature using the corresponding public key.
+
+If verification fails, the file is rejected.
+
+Digital signatures are used in:
+
+Software updates
+
+Code repositories
+
+Package managers
+
+Container images
+
+Checksums
+
+Checksums are used to verify file integrity after download.
+
+Process:
+
+Download file
+
+Compare checksum with official source
+
+If mismatch occurs, the file may be compromised
+
+How This Vulnerability Happens
+
+Software or Data Integrity Failures occur due to:
+
+Missing digital signature validation
+
+Improper update verification
+
+Accepting unsigned plugins or extensions
+
+Insecure CI/CD pipelines
+
+Unverified third-party libraries
+
+Weak hashing algorithms
+
+Unsafe deserialization
+
+Automatic updates without validation
+
+Real-World Impact
+
+If integrity controls fail:
+
+Malicious updates get installed
+
+Backdoors are injected into production systems
+
+Databases are tampered
+
+Supply chain compromises occur
+
+Ransomware spreads
+
+Privilege escalation becomes possible
+
+Modern attacks increasingly target build systems and software dependencies.
+
+Tools to Detect Integrity Issues
+SAST (Static Application Security Testing)
+
+Purpose:
+Analyzes source code without executing it.
+
+Detects:
+
+Hardcoded secrets
+
+Unsafe deserialization
+
+Weak hashing
+
+Insecure update logic
+
+Examples:
+
+SonarQube
+
+Checkmarx
+
+Fortify
+
+Used during development.
+
+DAST (Dynamic Application Security Testing)
+
+Purpose:
+Tests running applications.
+
+Detects:
+
+Runtime vulnerabilities
+
+Broken update validation
+
+Insecure file handling
+
+Examples:
+
+OWASP ZAP
+
+Burp Suite
+
+Used in staging or production-like environments.
+
+File Integrity Monitoring (FIM)
+
+Purpose:
+Monitors critical system files for unauthorized changes.
+
+Detects:
+
+Modified system files
+
+Configuration changes
+
+Suspicious file replacements
+
+Examples:
+
+OSSEC
+
+Tripwire
+
+Wazuh
+
+Used in production servers.
+
+Vulnerability Scanners
+
+Purpose:
+Scan systems and applications for known vulnerabilities.
+
+Detect:
+
+Outdated libraries
+
+Known CVEs
+
+Misconfigurations
+
+Examples:
+
+Nessus
+
+OpenVAS
+
+Qualys
+
+Software Composition Analysis (SCA)
+
+Purpose:
+Analyze third-party dependencies.
+
+Detects:
+
+Vulnerable packages
+
+License issues
+
+Supply chain risks
+
+Examples:
+
+Snyk
+
+OWASP Dependency-Check
+
+Black Duck
+
+Prevention Techniques
+
+Use strong cryptographic hashing such as SHA-256 or stronger.
+
+Implement mandatory digital signature verification for updates and artifacts.
+
+Secure CI/CD pipelines by:
+
+Restricting access
+
+Protecting secrets
+
+Signing build artifacts
+
+Maintain a Software Bill of Materials (SBOM) to track dependencies.
+
+Enable file integrity monitoring on production systems.
+
+Enforce secure update mechanisms using:
+
+HTTPS
+
+Certificate validation
+
+Signature verification before installation
+
+Example Scenario
+
+A company provides automatic software updates.
+
+If updates are downloaded without signature verification and checksum validation, an attacker can intercept traffic, replace the update file, and install malware silently.
+
+This results in complete system compromise.
+
+DevSecOps Perspective
+
+Integrity validation should be integrated into:
+
+Code commit stage
+
+Build stage
+
+Dependency management
+
+Deployment pipeline
+
+Runtime monitoring
+
+Security must be continuous and automated.
+
+Conclusion
+
+Software or Data Integrity Failures are critical risks in modern application ecosystems.
+
+Without integrity verification, systems become vulnerable to silent compromise.
+
+With strong cryptographic validation, continuous monitoring, and secure pipelines, organizations can build resilient and trustworthy systems.
