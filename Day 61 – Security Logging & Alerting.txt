@@ -1,0 +1,97 @@
+Day 61 – Security Logging & Alerting Failures
+
+Introduction
+
+Security Logging and Alerting Failures occur when systems do not generate sufficient logs, fail to monitor events properly, or do not trigger alerts for suspicious activities. Without proper logging and monitoring, security incidents remain undetected, allowing attackers to operate inside systems for extended periods.
+
+This issue is closely associated with Insufficient Logging and Monitoring in the OWASP Top 10.
+
+What is Security Logging and Alerting?
+
+Security logging is the process of recording system activities, user actions, authentication attempts, API calls, configuration changes, and network events.
+
+Alerting is the mechanism that notifies security teams when suspicious or predefined conditions occur.
+
+Together, logging and alerting provide visibility into system behavior and help detect security incidents in real time.
+
+Why Logging and Alerting Are Important
+
+Detects suspicious activities such as brute force attacks or unusual login attempts.
+
+Enables faster incident response.
+
+Provides forensic evidence after a breach.
+
+Supports regulatory compliance requirements.
+
+Helps analyze attack patterns and improve security posture.
+
+Without visibility, organizations cannot control or secure their infrastructure effectively.
+
+How Systems Are Compromised Without Logging
+
+When logging and alerting are not properly implemented:
+
+Attackers can move laterally across systems without detection.
+
+Privilege escalation activities go unnoticed.
+
+Malware persistence mechanisms remain hidden.
+
+Data exfiltration is not identified.
+
+There is no audit trail for investigation.
+
+Typical Undetected Attack Flow:
+
+Initial Access → Privilege Escalation → Persistence → Lateral Movement → Data Exfiltration
+
+If no alerts are triggered at each stage, the breach may remain undetected for months.
+
+Tools Used for Logging and Monitoring
+
+Splunk and IBM QRadar
+These are SIEM (Security Information and Event Management) platforms that collect, correlate, and analyze logs from multiple sources. They generate alerts based on predefined rules and behavioral analysis. They are widely used in Security Operations Centers (SOC).
+
+ELK Stack (Elasticsearch, Logstash, Kibana)
+The ELK Stack is used for centralized logging.
+
+Elasticsearch indexes log data.
+
+Logstash collects and processes logs.
+
+Kibana visualizes data through dashboards.
+It enables real-time monitoring and investigation.
+
+Wazuh
+Wazuh is an open-source security monitoring platform that provides host-based intrusion detection, file integrity monitoring, log analysis, and compliance auditing.
+
+Graylog
+Graylog is a centralized log management solution that allows real-time log analysis, search functionality, and alert configuration.
+
+Amazon CloudWatch and Azure Monitor
+These cloud-native monitoring tools track infrastructure metrics, API activity, and security events in cloud environments. They generate alerts based on abnormal behavior or predefined thresholds.
+
+Best Practices to Prevent Logging Failures
+
+Enable logging at application, database, network, and cloud levels.
+
+Centralize logs using a SIEM or log management platform.
+
+Configure proper alert thresholds.
+
+Monitor authentication failures and privilege changes.
+
+Protect logs from tampering.
+
+Retain logs according to compliance requirements.
+
+Regularly review logs and alerts.
+
+Key Takeaway
+
+Logging provides visibility.
+Monitoring provides detection.
+Alerting enables response.
+
+If security events are not logged and monitored, organizations lose the ability to detect and respond to attacks effectively.
